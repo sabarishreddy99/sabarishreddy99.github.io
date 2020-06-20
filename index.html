@@ -311,18 +311,18 @@ height: 100%;
   <form>
     <div class="form-group">
       <label for="noc">No of classes:</label>
-      <input type="number" class="form-control" id="noc" min="1" step="1" value="1" >
+      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="1" placeholder=">=1" >
     </div>
     <div class="form-group">
       <label for="one">Classes Present:</label>
-      <input type="number" class="form-control" min="1" step="1" id="one">
+      <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder=">=0">
     </div>
     <div style="text-align: center;">
       <span class="badge badge-secondary">OR</span> 
     </div>
     <div class="form-group">
       <label for="two">Classes Absent <span class="badge badge-secondary" style="font-family: ABeeZee;"> >= 1</span> :</label>
-      <input type="number" class="form-control" min="1" step="1" id="two" >
+      <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder=">=1" >
     </div>
 
       <div class="progress">
@@ -349,7 +349,7 @@ height: 100%;
   </div>
 
     <div style="text-align: right;">
-  <input type="button" onClick="divideBy()" class="btn btn-secondary" value="Compute"/>
+  <input type="button" onClick="divideBy()" class="btn btn-danger" value="Compute"/>
    </div>
 
     
