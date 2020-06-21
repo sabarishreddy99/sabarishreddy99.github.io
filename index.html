@@ -199,12 +199,12 @@ height: 100%;
 }
 
 
-.form-group input{
-    background-color:#E6E6FA;
-  }
+
  .form-group input:focus{
     background-color: #7FFFD4;
+    color:black;
   }
+
 
 
 </style>
@@ -322,21 +322,50 @@ height: 100%;
  <br>
  <h2 style="text-align: center;font-family: 'Coiny';"><small>Attendance Calculator</small></h2>
   <form>
-    <div class="form-group">
-      <label for="noc">No of classes:</label>
-      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="1" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+
+    <label for="noc">No of classes:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+      <input class="btn btn-danger" onClick="tclassesadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="10" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <div class="input-group-append">
+      <input class="btn btn-danger" onClick="tclassessub()" type="button" value="-" >  
+     </div>
     </div>
-    <div class="form-group">
-      <label for="one">Classes Present:</label>
+
+
+    <label for="one">Classes Present:</label>
+    <div class="form-group input-group">
+       <div class="input-group-prepend">
+      <input class="btn btn-info" id="paddons" onClick="pclassesadd()" type="button" value="+">  
+     </div>
       <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <div class="input-group-append">
+      <input class="btn btn-info" id="paddons1" onClick="pclassessub()" type="button" value="-" >  
+     </div>
     </div>
-    <div style="text-align: center;">
-      <span class="badge badge-secondary">OR</span> 
+
+
+    <div style="text-align: center;color:black;">
+      <span class="badge badge-warning">OR</span> 
     </div>
-    <div class="form-group">
-      <label for="two">Classes Absent <span class="badge badge-secondary" style="font-family: ABeeZee;"> >= 1</span> :</label>
+
+
+
+
+     <label for="two">Classes Absent <span class="badge badge-secondary" style="font-family: ABeeZee;"> >= 1</span> :</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+      <input class="btn btn-info" id="aaddons" onClick="aclassesadd()" type="button" value="+">  
+     </div>
       <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
+      <div class="input-group-append">
+      <input class="btn btn-info" id="aaddons1" onClick="aclassessub()" type="button" value="-" >  
+     </div>
     </div>
+
+
 
       <div class="progress">
     <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:50%">
@@ -353,6 +382,7 @@ height: 100%;
     
     <div class="alert alert-info  fade show">
        <strong >Info & Alerts:</strong>
+       <p style="font-family: 'Alata';color: black;"><strong>Note:</strong>Use either any one of the entries(Classes Present or Classes Absent).</p> 
         <div class="progress" style="height:20px;">
     <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%;height:20px;" id="bar"></div>
   </div>
@@ -397,16 +427,32 @@ height: 100%;
       <input type="number" class="form-control" id="ccgpa" min="0" max="10" step="0.005" placeholder="Enter your current CGPA."/>
   </div>
 
-    <div class="form-group">
-      <label>Total no of Credits Completed:</label>
+
+
+<label>Total no of Credits Completed:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+      <input class="btn btn-primary" onClick="ccestadd()" type="button" value="+">  
+     </div>
       <input type="number" class="form-control" id="ccredits" min="1" max="300"  placeholder="Enter no of credits completed till now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <div class="input-group-append">
+      <input class="btn btn-primary" onClick="ccestsub()" type="button" value="-" >  
+     </div>
       </div>
 
-    <div class="form-group">
-      <label>No of Credits taken now:</label>
+
+<label>No of Credits taken now:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+      <input class="btn btn-warning" onClick="cnestadd()" type="button" value="+">  
+     </div>
       <input type="number" class="form-control" id="ncredits" min="1" max="50"  placeholder="Enter no of credits taken now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
-    
- </div>
+      <div class="input-group-append">
+      <input class="btn btn-warning" onClick="cnestsub()" type="button" value="-" >  
+     </div>
+     </div>
+
+
 
    <div class="alert alert-warning">
        <strong style="color: #DC143C;">Info & Alerts:</strong>
@@ -630,6 +676,69 @@ height: 100%;
 
 <script>
 	//<!----CGPA Estimator--->
+
+function ccestadd(){
+	if(document.getElementById("ccredits").value==""){
+		document.getElementById("ccredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ccredits").value>=300){
+		document.getElementById("ccredits").value=300;
+		cgpaestimation();
+	}
+	else{
+	document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)+1;
+	cgpaestimation();
+}
+}
+function ccestsub(){
+	if(document.getElementById("ccredits").value==1){
+		document.getElementById("ccredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ccredits").value>=300){
+		document.getElementById("ccredits").value=300;
+		document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)-1;
+	cgpaestimation();
+	}
+	else{
+	document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)-1;
+	cgpaestimation();
+}
+}
+function cnestadd(){
+	if(document.getElementById("ncredits").value==""){
+		document.getElementById("ncredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ncredits").value>=50){
+		document.getElementById("ncredits").value=50;
+		cgpaestimation();
+	}
+	else{
+	document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)+1;
+	cgpaestimation();
+}
+}
+function cnestsub(){
+	if(document.getElementById("ncredits").value==1){
+		document.getElementById("ncredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ncredits").value>=50){
+		document.getElementById("ncredits").value=50;
+		document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)-1;
+	    cgpaestimation();
+	}
+	else{
+	document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)-1;
+	cgpaestimation();
+}
+}
+
+
+
+
 	function cgpaestimation() 
 {      
        var x = document.getElementById("CGPAneed").value;
@@ -713,21 +822,118 @@ document.getElementById("estcgpa1").innerHTML = "Happy Learning !";
 
 var one = document.getElementById('one');
 var two = document.getElementById('two');
+var oneaddon=document.getElementById('paddons');
+var oneaddon1=document.getElementById('paddons1');
+var twoaddon=document.getElementById('aaddons');
+var twoaddon1=document.getElementById('aaddons1');
 
 //checks instantly 
 var checker = setInterval(function() {
     if(two.value !== '') {
       one.disabled = true;
+      oneaddon.disabled=true;
+      oneaddon1.disabled=true;
     } else {
       //when its clear, it enabled again
       one.disabled = false;
+       oneaddon.disabled=false;
+        oneaddon1.disabled=false;
     }
     if(one.value !== '') {
-      two.disabled = true
+      two.disabled = true;
+       twoaddon.disabled=true;
+       twoaddon1.disabled=true;
     } else {
       two.disabled = false;
+       twoaddon.disabled=false;
+       twoaddon1.disabled=false;
+
     }
 }, 30);
+
+
+
+
+
+function tclassesadd(){
+if(document.getElementById("noc").value==""){
+    document.getElementById("noc").value=1;
+    divideBy();
+  }
+  else{
+document.getElementById("noc").value=parseInt(document.getElementById("noc").value)+1;
+divideBy();
+}
+}
+
+
+function tclassessub(){
+  if(document.getElementById("noc").value==1){
+    document.getElementById("noc").value=1;
+    divideBy();
+  }
+  else{
+document.getElementById("noc").value=parseInt(document.getElementById("noc").value)-1;
+divideBy();
+}
+}
+
+
+
+
+
+function pclassesadd(){
+if(document.getElementById("one").value==""){
+    document.getElementById("one").value=0;
+    divideBy();
+  }
+else{
+document.getElementById("one").value=parseInt(document.getElementById("one").value)+1;
+divideBy();
+}
+}
+
+
+function pclassessub(){
+  if(document.getElementById("one").value==1){
+    document.getElementById("one").value="";
+    divideBy();
+  }
+  else{
+document.getElementById("one").value=parseInt(document.getElementById("one").value)-1;
+divideBy();
+}
+}
+
+
+
+
+function aclassesadd(){
+if(document.getElementById("two").value==""){
+    document.getElementById("two").value=1;
+    divideBy();
+  }
+else{
+document.getElementById("two").value=parseInt(document.getElementById("two").value)+1;
+divideBy();
+}
+}
+
+
+function aclassessub(){
+  if(document.getElementById("two").value==1){
+    document.getElementById("two").value="";
+    divideBy();
+  }
+  else{
+document.getElementById("two").value=parseInt(document.getElementById("two").value)-1;
+divideBy();
+}
+}
+
+
+
+
 function divideBy() 
 { 
        var num1 = document.getElementById("noc").value;
