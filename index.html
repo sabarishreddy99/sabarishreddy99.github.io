@@ -326,24 +326,24 @@ height: 100%;
 
     <label for="noc">No of classes:</label>
     <div class="form-group input-group">
-      <div class="input-group-prepend">
-      <input class="btn btn-danger" onClick="tclassesadd()" type="button" value="+">  
+      <div class="input-group-prepend ">
+      <input class="btn btn-danger pl-4 pr-4" onClick="tclassesadd()" type="button" value="+">  
      </div>
       <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="10" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
-      <div class="input-group-append">
-      <input class="btn btn-danger" onClick="tclassessub()" type="button" value="-" >  
+      <div class="input-group-append ">
+      <input class="btn btn-danger pl-4 pr-4" onClick="tclassessub()" type="button" value="-" >  
      </div>
     </div>
 
 
     <label for="one">Classes Present:</label>
     <div class="form-group input-group">
-       <div class="input-group-prepend">
-      <input class="btn btn-info" id="paddons" onClick="pclassesadd()" type="button" value="+">  
+       <div class="input-group-prepend ">
+      <input class="btn btn-info pl-4 pr-4" id="paddons" onClick="pclassesadd()" type="button" value="+">  
      </div>
       <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
-      <div class="input-group-append">
-      <input class="btn btn-info" id="paddons1" onClick="pclassessub()" type="button" value="-" >  
+      <div class="input-group-append ">
+      <input class="btn btn-info pl-4 pr-4" id="paddons1" onClick="pclassessub()" type="button" value="-" >  
      </div>
     </div>
 
@@ -357,12 +357,12 @@ height: 100%;
 
      <label for="two">Classes Absent <span class="badge badge-secondary" style="font-family: ABeeZee;"> >= 1</span> :</label>
     <div class="form-group input-group">
-      <div class="input-group-prepend">
-      <input class="btn btn-info" id="aaddons" onClick="aclassesadd()" type="button" value="+">  
+      <div class="input-group-prepend ">
+      <input class="btn btn-info pl-4 pr-4" id="aaddons" onClick="aclassesadd()" type="button" value="+">  
      </div>
       <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
-      <div class="input-group-append">
-      <input class="btn btn-info" id="aaddons1" onClick="aclassessub()" type="button" value="-" >  
+      <div class="input-group-append ">
+      <input class="btn btn-info pl-4 pr-4" id="aaddons1" onClick="aclassessub()" type="button" value="-" >  
      </div>
     </div>
 
@@ -432,24 +432,24 @@ height: 100%;
 
 <label>Total no of Credits Completed:</label>
     <div class="form-group input-group">
-      <div class="input-group-prepend">
-      <input class="btn btn-primary" onClick="ccestadd()" type="button" value="+">  
+      <div class="input-group-prepend ">
+      <input class="btn btn-primary pl-4 pr-4" onClick="ccestadd()" type="button" value="+">  
      </div>
       <input type="number" class="form-control" id="ccredits" min="1" max="300"  placeholder="Enter no of credits completed till now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
-      <div class="input-group-append">
-      <input class="btn btn-primary" onClick="ccestsub()" type="button" value="-" >  
+      <div class="input-group-append ">
+      <input class="btn btn-primary pl-4 pr-4" onClick="ccestsub()" type="button" value="-" >  
      </div>
       </div>
 
 
 <label>No of Credits taken now:</label>
     <div class="form-group input-group">
-      <div class="input-group-prepend">
-      <input class="btn btn-warning" onClick="cnestadd()" type="button" value="+">  
+      <div class="input-group-prepend ">
+      <input class="btn btn-warning pl-4 pr-4" onClick="cnestadd()" type="button" value="+">  
      </div>
       <input type="number" class="form-control" id="ncredits" min="1" max="50"  placeholder="Enter no of credits taken now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
-      <div class="input-group-append">
-      <input class="btn btn-warning" onClick="cnestsub()" type="button" value="-" >  
+      <div class="input-group-append ">
+      <input class="btn btn-warning pl-4 pr-4" onClick="cnestsub()" type="button" value="-" >  
      </div>
      </div>
 
@@ -869,7 +869,11 @@ divideBy();
 
 
 function tclassessub(){
-  if(document.getElementById("noc").value==1){
+	if(document.getElementById("noc").value==0){
+    document.getElementById("noc").value=1;
+    divideBy();
+  }
+  else if(document.getElementById("noc").value==1){
     document.getElementById("noc").value=1;
     divideBy();
   }
