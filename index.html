@@ -15,6 +15,7 @@
   <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
  
 <style type="text/css">
 form label{
@@ -322,9 +323,18 @@ height: 100%;
 	<!---Attendance Calculator--->
  <br>
  <h2 style="text-align: center;font-family: 'Coiny';"><small>Attendance Calculator</small></h2>
+ <br>
   <form>
+<div class="custom-control custom-switch">
 
-    <label for="noc">No of classes:</label>
+      <input type="checkbox" href="#switch" class="custom-control-input" id="switch1" data-toggle="collapse" name="example">
+      <label style="font-family: Aleo;font-weight: bold;color:#FFEBCD;" class="custom-control-label" for="switch1"> Toggle Attendance Format</label>
+    </div>
+    
+    <div id="switch" class="collapse">
+    <h2 style="text-align: center;font-family: 'Audiowide';"><small>Format-2</small></h2>
+  
+  	<label for="noc">Total classes:</label>
     <div class="form-group input-group">
       <div class="input-group-prepend ">
       <input class="btn btn-danger pl-4 pr-4 font-weight-bold" onClick="tclassesadd()" type="button" value="+">  
@@ -396,7 +406,79 @@ height: 100%;
   <input type="button" onClick="divideBy()" class="btn btn-danger" value="Compute"/>
    </div>
 
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 style="text-align: center;font-family: 'Audiowide';"><small>Format-1</small></h2>
+ <label for="cone">Classes Present:</label>
+    <div class="form-group input-group">
+       <div class="input-group-prepend ">
+      <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons" onClick="cpclassesadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" min="1" step="1" max="300" id="cone" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <div class="input-group-append ">
+      <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons1" onClick="cpclassessub()" type="button" value="-" >  
+     </div>
+    </div>
+
+
+
+
+
+     <label for="ctwo">Classes Absent:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend ">
+      <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="caaddons" onClick="caclassesadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" min="1" max="300" step="1" id="ctwo" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
+      <div class="input-group-append ">
+      <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="caaddons1" onClick="caclassessub()" type="button" value="-" >  
+     </div>
+    </div>
+
+
+
+      <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:50%">
+      <50%
+    </div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:25%">
+      <span style="color: black;"><75%</span>
+    </div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:25%">
+      >=75%
+    </div>
+  </div>
+     <br>
     
+    <div class="alert alert-info  fade show">
+       <strong >Info & Alerts:</strong>
+       
+        <div class="progress" style="height:20px;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%;height:20px;" id="cbar"></div>
+  </div>
+     
+   <p style="font-family: 'Alata';color: black;" id="cresult2"></p> 
+
+  </div>
+
+    <div style="text-align: right;">
+  <input type="button" onClick="cdivideBy()" class="btn btn-danger" value="Compute"/>
+   </div>
+
   </form>
   <br> 
 </div>
@@ -821,6 +903,261 @@ document.getElementById("estcgpa1").innerHTML = "Happy Learning !";
 
 	//<!----Attendance Calculator--->
 
+
+
+
+
+
+function cpclassesadd(){
+if(document.getElementById("cone").value==""){
+    document.getElementById("cone").value=1;
+    cdivideBy();
+  }
+else{
+document.getElementById("cone").value=parseInt(document.getElementById("cone").value)+1;
+cdivideBy();
+}
+}
+
+
+function cpclassessub(){
+  if(document.getElementById("cone").value==1){
+    document.getElementById("cone").value=0;
+    cdivideBy();
+  }
+  else if(document.getElementById("cone").value==0){
+    document.getElementById("cone").value=0;
+    cdivideBy();
+}
+  else{
+document.getElementById("cone").value=parseInt(document.getElementById("cone").value)-1;
+cdivideBy();
+}
+}
+
+
+
+
+function caclassesadd(){
+if(document.getElementById("ctwo").value==""){
+    document.getElementById("ctwo").value=1;
+    cdivideBy();
+  }
+else{
+document.getElementById("ctwo").value=parseInt(document.getElementById("ctwo").value)+1;
+cdivideBy();
+}
+}
+
+
+function caclassessub(){
+  if(document.getElementById("ctwo").value<=1){
+    document.getElementById("ctwo").value=0;
+    cdivideBy();
+  }
+  else{
+document.getElementById("ctwo").value=parseInt(document.getElementById("ctwo").value)-1;
+cdivideBy();
+}
+}
+
+
+
+
+function cdivideBy() 
+{ 
+      
+       var num2 = parseInt(document.getElementById('cone').value);
+       var num3 = parseInt(document.getElementById("ctwo").value); 
+
+if(num2<0 || num3<0)
+{
+
+document.getElementById("cresult2").innerHTML = "Please check your entries,shouldn't be negative.";
+document.getElementById("cbar").style.width = "0%";
+}
+
+else if(num3==0 && num2==0)
+{
+
+document.getElementById("cresult2").innerHTML = "Your attendance is 0%" ;
+document.getElementById("cbar").style.width = 0+"%";
+
+}
+
+else if(num3>0){
+  var num4=(((num2+num3)-num3)/(num2+num3))*100;
+ 
+  if(num4>100){
+    document.getElementById("cresult2").innerHTML = "Please check your entries.";
+   
+document.getElementById("cbar").style.width = "0%";
+  }
+  else if(num4>=75){
+    document.getElementById("cbar").classList.remove("bg-danger");
+    document.getElementById("cbar").classList.remove("bg-warning");
+    document.getElementById("cbar").classList.add("bg-success");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+}
+else if(num4>=50){
+    document.getElementById("cbar").classList.remove("bg-danger");
+    document.getElementById("cbar").classList.remove("bg-success");
+    document.getElementById("cbar").classList.add("bg-warning");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+}
+else if(num4<0){
+document.getElementById("cresult2").innerHTML = "Please check your entries.";
+document.getElementById("cbar").style.width = "0%";
+}
+  else{
+     document.getElementById("cbar").classList.remove("bg-success");
+    document.getElementById("cbar").classList.remove("bg-warning");
+  document.getElementById("cbar").classList.add("bg-danger");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+  }
+}
+
+else {
+  var num4=(num2/num2)*100;
+  if(num4>100){
+    document.getElementById("cresult2").innerHTML = "Please check your entries.";
+document.getElementById("cbar").style.width = "0%";
+  }
+  else if(num4>=75){
+    document.getElementById("cbar").classList.remove("bg-danger");
+    document.getElementById("cbar").classList.remove("bg-warning");
+    document.getElementById("cbar").classList.add("bg-success");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+}
+else if(num4>=50){
+    document.getElementById("cbar").classList.remove("bg-danger");
+    document.getElementById("cbar").classList.remove("bg-success");
+    document.getElementById("cbar").classList.add("bg-warning");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+}
+  else{
+     document.getElementById("cbar").classList.remove("bg-success");
+    document.getElementById("cbar").classList.remove("bg-warning");
+     document.getElementById("cbar").classList.add("bg-danger");
+document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
+document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
+document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var oneaddon=document.getElementById('paddons');
@@ -889,7 +1226,7 @@ divideBy();
 
 function pclassesadd(){
 if(document.getElementById("one").value==""){
-    document.getElementById("one").value=0;
+    document.getElementById("one").value=1;
     divideBy();
   }
 else{
@@ -941,14 +1278,14 @@ divideBy();
 
 function divideBy() 
 { 
-       var num1 = document.getElementById("noc").value;
-       var num2 = document.getElementById('one').value;
-       var num3 = document.getElementById("two").value; 
+       var num1 = (document.getElementById("noc").value);
+       var num2 = (document.getElementById('one').value);
+       var num3 = (document.getElementById("two").value); 
 
 if(num1<1 || num2<0 || num3<0)
 {
 
-document.getElementById("result2").innerHTML = "Please check your entries,shouldn't be negative or non zero total classes";
+document.getElementById("result2").innerHTML = "Please check your entries,shouldn't be negative;non zero total classes or empty.";
 document.getElementById("bar").style.width = "0%";
 }
 
