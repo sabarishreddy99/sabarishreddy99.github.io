@@ -537,15 +537,46 @@ height: 100%;
 
 
 
-   <div class="alert alert-warning">
-       <strong style="color: #DC143C;">Info & Alerts:</strong>
+    <div style="text-align: right;">
+  <input type="button" onClick="cgpaestimation()" class="btn btn-danger" data-toggle="modal" data-target="#myModalcgpaest" value="Estimate"/>
+   </div>
+
+
+ <!-- The Modal cgpa estimator -->
+  <div class="modal fade" id="myModalcgpaest">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+           <div class="alert alert-warning">
        <p id="estcgpa" style="font-family: 'Aleo'; font-weight: bold;color: #00008B;" ></p>
        <strong id="estcgpa1" style="font-family: 'Satisfy';font-size: 19px;color: black;"></strong>
      </div>
 
-    <div style="text-align: right;">
-  <input type="button" onClick="cgpaestimation()" class="btn btn-danger" value="Estimate"/>
-   </div>
+        </div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 
 
   </form>
@@ -732,18 +763,91 @@ height: 100%;
     </div> 
 
 
-<div class="alert alert-primary">
-       <strong style="color: #DC143C;">Info & Alerts:</strong>
+    <div >
+  <input style="float: right;" type="button" onClick="cgpacal()" class="btn btn-danger" data-toggle="modal" data-target="#myModalcgpacal" value="Compute"/>
+  <input style="float: left;" type="button" onClick="cgpacalform()" class="btn btn-primary" data-toggle="modal" data-target="#myModalcgpacalreset" value="Reset"/>
+   </div>
+
+
+
+ <!-- The Modal cgpa cal -->
+  <div class="modal fade" id="myModalcgpacal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="alert alert-primary">
        <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>Max Credits<=50;Max GPA<=10</p> 
        <p id="alertcgpacal" style="font-family: 'Alata';color: #4B0082;font-weight: bold" ></p>
        <strong id="alertcgpacal1" style="font-family: 'Satisfy';font-size: 19px;color: black;"></strong>
      </div>
 
-    <div >
-  <input style="float: right;" type="button" onClick="cgpacal()" class="btn btn-danger" value="Compute"/>
-  <input style="float: left;" type="button" onClick="cgpacalform()" class="btn btn-primary" value="Reset"/>
-   </div>
+        </div>
 
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+ <!-- The Modal cgpa cal Reset -->
+  <div class="modal fade" id="myModalcgpacalreset">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="alert alert-primary">
+       <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>Max Credits<=50;Max GPA<=10</p> 
+       <p id="alertcgpacal" style="font-family: 'Alata';color: #4B0082;font-weight: bold" ></p>
+       <strong id="alertcgpacal1" style="font-family: 'Satisfy';font-size: 19px;color: black;"></strong>
+     </div>
+
+        </div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
 
 
 
@@ -1373,6 +1477,7 @@ document.getElementById("cbar").style.width = 0+"%";
 
 else if(num3>0){
   var num4=(((num2+num3)-num3)/(num2+num3))*100;
+  num4 = num4 || 0;
  
   if(num4>100){
     document.getElementById("cresult2").innerHTML = "Please check your entries.";
@@ -1411,6 +1516,7 @@ document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFix
 
 else {
   var num4=(num2/num2)*100;
+  num4 = num4 || 0;
   if(num4>100){
     document.getElementById("cresult2").innerHTML = "Please check your entries.";
 document.getElementById("cbar").style.width = "0%";
@@ -1686,6 +1792,7 @@ document.getElementById("bar").style.width = 0+"%";
 else if(num3>0){
   var num5=num1-num3;
   var num4=(num5/num1)*100;
+  num4 = num4 || 0;
   if(num4>100){
     document.getElementById("result2").innerHTML = "Please check your entries.";
    
@@ -1723,6 +1830,7 @@ document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixe
 
 else {
   var num4=(num2/num1)*100;
+  num4 = num4 || 0;
   if(num4>100){
     document.getElementById("result2").innerHTML = "Please check your entries." ;
 document.getElementById("bar").style.width = "0%";
