@@ -202,7 +202,7 @@ height: 100%;
 
 
 
- .form-group input:focus{
+ .form-group input:focus,.input-group input:focus{
     background-color: #7FFFD4;
     color:black;
   }
@@ -299,7 +299,7 @@ height: 100%;
         <a class="nav-link text-dark" href="#"><h5><strong>GPA Calculator</strong></h5></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#"><h5><strong>CGPA Calculator</strong></h5></a>
+        <a class="nav-link text-dark" href="#cgpacalculatorlink"><h5><strong>CGPA Calculator</strong></h5></a>
       </li>    
       <li class="nav-item">
         <a class="nav-link text-dark" href="#cgpaestimatorlink"><h5><strong>CGPA Estimator</strong></h5></a>
@@ -554,10 +554,207 @@ height: 100%;
 
 
 </div>
+<br id="cgpacalculatorlink">
+<br>
+
+
+
+<!----CGPA calculator--->
+<div class="container containers" >
+<br>
+<h2 style="text-align: center;font-family: 'Coiny';"><small>CGPA Calculator</small></h2>
+  <form id="cgpaform">
+  	<label>Semester-1</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem1c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem1g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+    <label>Semester-2</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem2c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem2g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-3</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem3c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem3g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-4</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem4c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem4g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-5</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem5c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem5g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
 
 
 
 
+    <label>Semester-6</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem6c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem6g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-7</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem7c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem7g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+
+    <label>Semester-8</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem8c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem8g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-9</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem9c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem9g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-10</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem10c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem10g" min="0" max="10" placeholder="GPA max-10" step="0.1">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-11</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem11c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem11g" min="0" max="10" step="0.1" placeholder="GPA max-10">
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+
+    <label>Semester-12</label>
+    <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-danger" style="color: white;font-weight: bold;">Credits</span>
+      </div>
+      <input type="number" class="form-control" id="sem12c" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="Credits max-50">
+      <input type="number" class="form-control" id="sem12g" min="0" step="0.1" max="10" placeholder="GPA max-10" >
+      <div class="input-group-append">
+        <span class="input-group-text bg-warning" style="font-weight: bold;">GPA</span>
+      </div>
+    </div> 
+
+
+<div class="alert alert-primary">
+       <strong style="color: #DC143C;">Info & Alerts:</strong>
+       <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>Max Credits<=50;Max GPA<=10</p> 
+       <p id="alertcgpacal" style="font-family: 'Alata';color: #4B0082;font-weight: bold" ></p>
+       <strong id="alertcgpacal1" style="font-family: 'Satisfy';font-size: 19px;color: black;"></strong>
+     </div>
+
+    <div >
+  <input style="float: right;" type="button" onClick="cgpacal()" class="btn btn-danger" value="Compute"/>
+  <input style="float: left;" type="button" onClick="cgpacalform()" class="btn btn-primary" value="Reset"/>
+   </div>
+
+
+
+
+
+  </form>
+  
+ <br>
+ <br>
+<br>
+
+</div>
 
 
 
@@ -758,6 +955,195 @@ height: 100%;
 </div>
 
 <script>
+
+
+
+//CGPA calculator
+
+function cgpacalform(){
+	document.getElementById('cgpaform').reset();
+	document.getElementById("alertcgpacal").innerHTML = "Form is at it's default state.";
+		document.getElementById("alertcgpacal1").innerHTML = "";
+}
+
+function cgpacal(){
+
+
+
+var sem1c = parseInt(document.getElementById('sem1c').value);
+var sem1g = parseInt(document.getElementById('sem1g').value);
+
+var sem2c = parseInt(document.getElementById('sem2c').value);
+var sem2g = parseInt(document.getElementById('sem2g').value);
+
+var sem3c = parseInt(document.getElementById('sem3c').value);
+var sem3g = parseInt(document.getElementById('sem3g').value);
+
+var sem4c = parseInt(document.getElementById('sem4c').value);
+var sem4g = parseInt(document.getElementById('sem4g').value);
+
+var sem5c = parseInt(document.getElementById('sem5c').value);
+var sem5g = parseInt(document.getElementById('sem5g').value);
+
+var sem6c = parseInt(document.getElementById('sem6c').value);
+var sem6g = parseInt(document.getElementById('sem6g').value);
+
+var sem7c = parseInt(document.getElementById('sem7c').value);
+var sem7g = parseInt(document.getElementById('sem7g').value);
+
+var sem8c = parseInt(document.getElementById('sem8c').value);
+var sem8g = parseInt(document.getElementById('sem8g').value);
+
+var sem9c = parseInt(document.getElementById('sem9c').value);
+var sem9g = parseInt(document.getElementById('sem9g').value);
+
+var sem10c = parseInt(document.getElementById('sem10c').value);
+var sem10g = parseInt(document.getElementById('sem10g').value);
+
+var sem11c = parseInt(document.getElementById('sem11c').value);
+var sem11g = parseInt(document.getElementById('sem11g').value);
+
+var sem12c = parseInt(document.getElementById('sem12c').value);
+var sem12g = parseInt(document.getElementById('sem12g').value);
+
+sem1c = sem1c || 0;
+sem1g = sem1g || 0;
+
+sem2c = sem2c || 0;
+sem2g = sem2g || 0;
+
+sem3c = sem3c || 0;
+sem3g = sem3g || 0;
+
+sem4c = sem4c || 0;
+sem4g = sem4g || 0;
+
+sem5c = sem5c || 0;
+sem5g = sem5g || 0;
+
+sem6c = sem6c || 0;
+sem6g = sem6g || 0;
+
+
+sem7c = sem7c || 0;
+sem7g = sem7g || 0;
+
+
+sem8c = sem8c || 0;
+sem8g = sem8g || 0;
+
+
+sem9c = sem9c || 0;
+sem9g = sem9g || 0;
+
+sem10c = sem10c || 0;
+sem10g = sem10g || 0;
+
+sem11c = sem11c || 0;
+sem11g = sem11g || 0;
+
+sem12c = sem12c || 0;
+sem12g = sem12g || 0;
+
+
+
+
+
+
+
+if( sem1g<0 || sem2g<0 || sem3g<0 || sem4g<0 || sem5g<0 || sem6g<0 || sem7g<0 || sem8g<0 || sem9g<0 || sem10g<0 || sem11g<0 || sem12g<0){
+
+	document.getElementById("alertcgpacal").innerHTML = "Please check your respective GPA entries; shouldn't be negative,any special charecters,text.";
+	document.getElementById("alertcgpacal1").innerHTML = "";
+}
+
+else if( sem1g>10 || sem2g>10 || sem3g>10 || sem4g>10 || sem5g>10 || sem6g>10 || sem7g>10 || sem8g>10 || sem9g>10 || sem10g>10 || sem11g>10 || sem12g>10 || sem1c>50 || sem2c>50 || sem3c>50 || sem4c>50 || sem5c>50 || sem6c>50 || sem7c>50 || sem8c>50 || sem9c>50 || sem10c>50 || sem11c>50 || sem12c>50 ){
+
+	document.getElementById("alertcgpacal").innerHTML = "Please check the CREDITS and GPA limits;(0< CREDITS <=50) (0< GPA <=10)";
+	document.getElementById("alertcgpacal1").innerHTML = "";
+}
+
+
+
+else if((sem1c>0&&sem1g==0) || (sem2c>0&&sem2g==0) || (sem3c>0&&sem3g==0) || (sem4c>0&&sem4g==0) || (sem5c>0&&sem5g==0) || (sem6c>0&&sem6g==0) || (sem7c>0&&sem7g==0) || (sem8c>0&&sem8g==0) || (sem9c>0&&sem9g==0) || (sem10c>0&&sem10g==0) || (sem11c>0&&sem11g==0) || (sem12c>0&&sem12g==0) ){
+		document.getElementById("alertcgpacal").innerHTML = "GPA entries in the respective semesters aren't entered;where your credits are greater than zero (>0).";
+		document.getElementById("alertcgpacal1").innerHTML = "";
+	}
+
+
+
+else if((sem1c==0&&sem1g>0) || (sem2c==0&&sem2g>0) || (sem3c==0&&sem3g>0) || (sem4c==0&&sem4g>0) || (sem5c==0&&sem5g>0) || (sem6c==0&&sem6g>0) || (sem7c==0&&sem7g>0) || (sem8c==0&&sem8g>0) || (sem9c==0&&sem9g>0) || (sem10c==0&&sem10g>0) || (sem11c==0&&sem11g>0) || (sem12c==0&&sem12g>0) ){
+		document.getElementById("alertcgpacal").innerHTML = "Credit entries in the respective semesters aren't entered;where your GPA is greater than zero (>0).";
+		document.getElementById("alertcgpacal1").innerHTML = "";
+	}
+
+else{
+	
+		var cgpafinal=((sem1c*sem1g)+(sem2c*sem2g)+(sem3c*sem3g)+(sem4c*sem4g)+(sem5c*sem5g)+(sem6c*sem6g)+(sem7c*sem7g)+(sem8c*sem8g)+(sem9c*sem9g)+(sem10c*sem10g)+(sem11c*sem11g)+(sem12c*sem12g))/(sem1c+sem2c+sem3c+sem4c+sem5c+sem6c+sem7c+sem8c+sem9c+sem10c+sem11c+sem12c);
+
+		cgpafinal=cgpafinal||0;
+
+		if(cgpafinal>=9){
+			document.getElementById("alertcgpacal").innerHTML = "Your CGPA is "+cgpafinal.toFixed(3);
+			document.getElementById("alertcgpacal1").innerHTML = "You are awesome!Keep it up and Happy Learning!";
+		}
+		else if(cgpafinal>=8){
+			document.getElementById("alertcgpacal").innerHTML = "Your CGPA is "+cgpafinal.toFixed(3);
+			document.getElementById("alertcgpacal1").innerHTML = "You are at it.Excel in upcomming semesters.I'm very eager to see you as 9 pointer.";
+		}
+		else if(cgpafinal==0){
+			document.getElementById("alertcgpacal").innerHTML = "Please enter your semester wise credits and GPA.";
+			document.getElementById("alertcgpacal1").innerHTML = "";
+		}
+		else{
+		document.getElementById("alertcgpacal").innerHTML ="Your CGPA is "+cgpafinal.toFixed(3);
+		document.getElementById("alertcgpacal1").innerHTML = "Happy Learning!";
+
+	}
+	}
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//<!----CGPA Estimator--->
 
 function ccestadd(){
