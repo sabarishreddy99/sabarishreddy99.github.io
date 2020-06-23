@@ -467,6 +467,10 @@ input:checked + .slider {
 
   </div>
 
+  
+<br>
+
+
     <div style="text-align: right;">
   <input type="button" onClick="divideBy()" class="btn btn-danger" value="Compute"/>
    </div>
@@ -540,6 +544,9 @@ input:checked + .slider {
 
   </div>
 
+<br>
+
+
     <div style="text-align: right;">
   <input type="button" onClick="cdivideBy()" class="btn btn-danger" value="Compute"/>
    </div>
@@ -601,7 +608,7 @@ input:checked + .slider {
      </div>
 
 
-
+<br>
     <div style="text-align: right;">
   <input type="button" onClick="cgpaestimation()" class="btn btn-danger" data-toggle="modal" data-target="#myModalcgpaest" value="Estimate"/>
    </div>
@@ -1234,7 +1241,7 @@ input:checked + .slider {
     </div> 
 
 
-    
+    <br>
 
     <div >
   <input style="float: right;" type="button" onClick="gpacal()" class="btn btn-danger" data-toggle="modal" data-target="#myModalgpacal" value="Compute"/>
@@ -1432,7 +1439,142 @@ input:checked + .slider {
 <div class="container containers" >
 <br>
 <h2 style="text-align: center;font-family: 'Coiny';"><small>CGPA Calculator</small></h2>
+<br>
   <form id="cgpaform">
+
+
+
+<!---Instant CGPA--->
+
+
+
+
+        <div >
+        <label style="float: right;" class="switch">
+            <input type="checkbox" href="#iswitch" class="custom-control-input" id="iswitch1" data-toggle="collapse" name="example">
+            <span class="slider"></span>
+        </label>
+         <br>
+          <br>
+      </div>
+
+
+  <div id="iswitch" class="collapse">
+    <h2 style="text-align: center;font-family: 'Audiowide';"><small>Instant CGPA</small></h2>
+  
+
+  
+   
+
+    <div class="form-group">     
+      <label>CGPA till previous sem:</label>
+      <input type="number" class="form-control" id="iccgpa" min="0" max="10" step="0.005" placeholder="(max-10)"/>
+  </div>
+
+
+
+<label>Credits Completed till previous sem:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend ">
+      <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="iccestadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" id="iccredits" min="1" max="300"  placeholder="(max-300)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <div class="input-group-append ">
+      <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="iccestsub()" type="button" value="-" >  
+     </div>
+      </div>
+
+
+ <div class="form-group">
+    <label>Current sem GPA?</label>
+      <input type="number" class="form-control" id="iCGPAneed" min="0" step="0.05" max="10" placeholder="(max-10)">
+  </div>
+   
+
+
+<label>Current sem credits:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend ">
+      <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="icnestadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" id="incredits" min="1" max="50"  placeholder="(max-50)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <div class="input-group-append ">
+      <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="icnestsub()" type="button" value="-" >  
+     </div>
+     </div>
+
+<br>
+
+    <div style="text-align: right;">
+  <input type="button" onClick="icgpaestimation()" class="btn btn-danger" data-toggle="modal" data-target="#myModalicgpaest" value="Compute"/>
+   </div>
+
+
+ <!-- The Modal cgpa estimator -->
+  <div class="modal fade" id="myModalicgpaest">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+           <div class="alert alert-warning">
+       <p id="iestcgpa" style="font-family: 'Aleo'; font-weight: bold;color: #00008B;" ></p>
+       <strong id="iestcgpa1" style="font-family: 'Aleo';font-size: 19px;color: black;"></strong>
+     </div>
+
+        </div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+ 
+  <br>
+
+
+
+
+
+
+
+  	
+  </div>
+
+
+
+
+
+
+
+
+
+<!---Sem wise CGPA--->
+
+
+
+
+      <h2 style="text-align: center;font-family: 'Audiowide';"><small>Sem wise CGPA</small></h2>
+
   	<label>Semester-1</label>
     <div class="input-group mb-3" style="border:2px solid black;border-radius: 5px;">
       <div class="input-group-prepend">
@@ -1600,7 +1742,7 @@ input:checked + .slider {
       </div>
     </div> 
 
-
+<br>
     <div >
   <input style="float: right;" type="button" onClick="cgpacal()" class="btn btn-danger" data-toggle="modal" data-target="#myModalcgpacal" value="Compute"/>
   <input style="float: left;" type="button" onClick="cgpacalform()" class="btn btn-primary" data-toggle="modal" data-target="#myModalcgpacalreset" value="Reset"/>
@@ -2616,6 +2758,158 @@ else{
 	
 
 }
+
+
+
+
+
+
+
+
+
+//Instant CGPA
+
+
+function iccestadd(){
+	if(document.getElementById("iccredits").value==""){
+		document.getElementById("iccredits").value=1;
+		icgpaestimation();
+	}
+	else if(document.getElementById("iccredits").value>=300){
+		document.getElementById("iccredits").value=300;
+		icgpaestimation();
+	}
+	else{
+	document.getElementById("iccredits").value=parseInt(document.getElementById("iccredits").value)+1;
+	icgpaestimation();
+}
+}
+function iccestsub(){
+	if(document.getElementById("iccredits").value==1){
+		document.getElementById("iccredits").value=1;
+		icgpaestimation();
+	}
+	else if(document.getElementById("iccredits").value>=300){
+		document.getElementById("iccredits").value=300;
+		document.getElementById("iccredits").value=parseInt(document.getElementById("iccredits").value)-1;
+	icgpaestimation();
+	}
+	else{
+	document.getElementById("iccredits").value=parseInt(document.getElementById("iccredits").value)-1;
+	icgpaestimation();
+}
+}
+function icnestadd(){
+	if(document.getElementById("incredits").value==""){
+		document.getElementById("incredits").value=1;
+		icgpaestimation();
+	}
+	else if(document.getElementById("incredits").value>=50){
+		document.getElementById("incredits").value=50;
+		icgpaestimation();
+	}
+	else{
+	document.getElementById("incredits").value=parseInt(document.getElementById("incredits").value)+1;
+	icgpaestimation();
+}
+}
+function icnestsub(){
+	if(document.getElementById("incredits").value==1){
+		document.getElementById("incredits").value=1;
+		icgpaestimation();
+	}
+	else if(document.getElementById("incredits").value>=50){
+		document.getElementById("incredits").value=50;
+		document.getElementById("incredits").value=parseInt(document.getElementById("incredits").value)-1;
+	    icgpaestimation();
+	}
+	else{
+	document.getElementById("incredits").value=parseInt(document.getElementById("incredits").value)-1;
+	icgpaestimation();
+}
+}
+
+
+
+
+	function icgpaestimation() 
+{      
+       var x = document.getElementById("iCGPAneed").value;
+       var gpa = document.getElementById("iccgpa").value;
+       var cc = parseInt(document.getElementById("iccredits").value); 
+       var nc = parseInt(document.getElementById("incredits").value); 
+
+if((x<=0 || gpa<=0 || cc<=0 || nc<=0)){
+  document.getElementById("iestcgpa").innerHTML = "Please check your entries; shouldn't be zero,negative,any special charecters,text or empty.";
+  document.getElementById("iestcgpa1").innerHTML = "";
+
+}
+else if(x>10||gpa>10){
+  document.getElementById("iestcgpa").innerHTML = "Please check your entries; Average limit(0< GPA or CGPA <=10).";
+  document.getElementById("iestcgpa1").innerHTML = "";
+
+}
+else if(cc>300||nc>50){
+  document.getElementById("iestcgpa").innerHTML = "Please check your entries; Credit limitation(1<= Credits Completed <=300 & 1<= Credits this sem <=50 ).";
+  document.getElementById("iestcgpa1").innerHTML = "";
+
+}
+else{
+
+  var estnum1=((x*nc)+(gpa*cc))/(nc+cc);
+  if(estnum1<=0){
+   document.getElementById("iestcgpa").innerHTML = "Oops!Your entries are incorrect."
+   document.getElementById("iestcgpa1").innerHTML = "";
+  }
+  else if(estnum1>10){
+    document.getElementById("iestcgpa").innerHTML =" Invalid input;Please check your entries.";
+    document.getElementById("iestcgpa1").innerHTML = "You can proceed again.";
+
+  }
+  else if(estnum1>=9){
+document.getElementById("iestcgpa").innerHTML = "Your CGPA is "+estnum1.toFixed(3);
+document.getElementById("iestcgpa1").innerHTML = "You are Terrific ! and Happy Learning !";
+}
+  else{
+document.getElementById("iestcgpa").innerHTML = "Your CGPA is "+estnum1.toFixed(3);
+document.getElementById("iestcgpa1").innerHTML = "Happy Learning !";
+}
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
