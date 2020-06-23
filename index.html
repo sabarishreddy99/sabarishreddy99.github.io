@@ -207,6 +207,65 @@ height: 100%;
     color:black;
   }
 
+  /* Toggle switch */
+.switch input { 
+    display:none;
+}
+.switch {
+    display:inline-block;
+    width:60px;
+    height:30px;
+    margin:8px;
+    transform:translateY(50%);
+    position:relative;
+}
+/* Style Wired */
+.slider {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius:30px;
+    box-shadow:0 0 0 2px #777, 0 0 4px #777;
+    cursor:pointer;
+    border:4px solid transparent;
+    overflow:hidden;
+     transition:.4s;
+}
+.slider:before {
+    position:absolute;
+    content:"";
+    width:100%;
+    height:100%;
+    background:#FAEBD7;
+    border-radius:30px;
+    transform:translateX(-30px);
+    transition:.4s;
+}
+
+input:checked + .slider:before {
+    transform:translateX(30px);
+    background:limeGreen;
+}
+input:checked + .slider {
+    box-shadow:0 0 0 2px limeGreen,0 0 2px limeGreen;
+}
+
+/* Style Flat */
+.switch.flat .slider {
+ box-shadow:none;
+}
+.switch.flat .slider:before {
+  background:#FAEBD7;
+}
+.switch.flat input:checked + .slider:before {
+ background:white;
+}
+.switch.flat input:checked + .slider {
+  background:limeGreen;
+}
+
 
 
 </style>
@@ -325,11 +384,17 @@ height: 100%;
  <h2 style="text-align: center;font-family: 'Coiny';"><small>Attendance Calculator</small></h2>
  <br>
   <form>
-<div class="custom-control custom-switch">
 
-      <input type="checkbox" href="#switch" class="custom-control-input" id="switch1" data-toggle="collapse" name="example">
-      <label style="font-family: Aleo;font-size: 20px;font-weight: bold;color:#FFEBCD;" class="custom-control-label" for="switch1"> Toggle Attendance Format</label>
-    </div>
+        <div >
+        <label style="float: right;" class="switch">
+            <input type="checkbox" href="#switch" class="custom-control-input" id="switch1" data-toggle="collapse" name="example">
+            <span class="slider"></span>
+        </label>
+         <br>
+          <br>
+      </div>
+
+
     
     <div id="switch" class="collapse">
     <h2 style="text-align: center;font-family: 'Audiowide';"><small>Format-2</small></h2>
@@ -1163,7 +1228,7 @@ if( sem1g<0 || sem2g<0 || sem3g<0 || sem4g<0 || sem5g<0 || sem6g<0 || sem7g<0 ||
 
 else if( sem1g>10 || sem2g>10 || sem3g>10 || sem4g>10 || sem5g>10 || sem6g>10 || sem7g>10 || sem8g>10 || sem9g>10 || sem10g>10 || sem11g>10 || sem12g>10 || sem1c>50 || sem2c>50 || sem3c>50 || sem4c>50 || sem5c>50 || sem6c>50 || sem7c>50 || sem8c>50 || sem9c>50 || sem10c>50 || sem11c>50 || sem12c>50 ){
 
-	document.getElementById("alertcgpacal").innerHTML = "Please check the CREDITS and GPA limits;(0< CREDITS <=50) (0< GPA <=10)";
+	document.getElementById("alertcgpacal").innerHTML = "Please check the CREDITS and GPA limits;(0< CREDITS <=50)&(0< GPA <=10)";
 	document.getElementById("alertcgpacal1").innerHTML = "";
 }
 
