@@ -3494,12 +3494,12 @@ if(tc>0){
          else{  
           addlearn = addlearn || 0;
           if((tcm+addlearn-tfatc)>=60){
-          tcmadd= ((60*(cc-lc-jc))/cc)+tfatc;
+          tcmadd= (((60+tfatc)*(cc-lc-jc))/cc);
           
           }
 
           else{
-             tcmadd= (((tcm+addlearn-tfatc)*(cc-lc-jc))/cc)+tfatc;
+             tcmadd= (((tcm+addlearn)*(cc-lc-jc))/cc);
 
           }
 
