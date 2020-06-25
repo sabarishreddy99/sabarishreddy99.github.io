@@ -407,7 +407,7 @@ input:checked + .slider {
       <div class="input-group-prepend ">
       <input class="btn btn-danger pl-4 pr-4 font-weight-bold" onClick="tclassesadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="10" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="10" placeholder="(max-200)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
       <div class="input-group-append ">
       <input class="btn btn-danger pl-4 pr-4 font-weight-bold" onClick="tclassessub()" type="button" value="-" >  
      </div>
@@ -419,7 +419,7 @@ input:checked + .slider {
        <div class="input-group-prepend ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="paddons" onClick="pclassesadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder="(max-150)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
       <div class="input-group-append ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="paddons1" onClick="pclassessub()" type="button" value="-" >  
      </div>
@@ -438,7 +438,7 @@ input:checked + .slider {
       <div class="input-group-prepend ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="aaddons" onClick="aclassesadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder=">=1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
+      <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder="(max-150)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
       <div class="input-group-append ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="aaddons1" onClick="aclassessub()" type="button" value="-" >  
      </div>
@@ -500,7 +500,7 @@ input:checked + .slider {
        <div class="input-group-prepend ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons" onClick="cpclassesadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" min="1" step="1" max="300" id="cone" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+      <input type="number" class="form-control" min="1" step="1" max="300" id="cone" placeholder="(max-100)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
       <div class="input-group-append ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons1" onClick="cpclassessub()" type="button" value="-" >  
      </div>
@@ -515,7 +515,7 @@ input:checked + .slider {
       <div class="input-group-prepend ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="caaddons" onClick="caclassesadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" min="1" max="300" step="1" id="ctwo" placeholder=">=0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
+      <input type="number" class="form-control" min="1" max="300" step="1" id="ctwo" placeholder="(max-100)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
       <div class="input-group-append ">
       <input class="btn btn-info pl-4 pr-4 font-weight-bold" id="caaddons1" onClick="caclassessub()" type="button" value="-" >  
      </div>
@@ -593,7 +593,7 @@ input:checked + .slider {
       <div class="input-group-prepend ">
       <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="ccestadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" id="ccredits" min="1" max="300"  placeholder="Enter no of credits completed till now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <input type="number" class="form-control" id="ccredits" min="1" max="300"  placeholder="(max-300)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
       <div class="input-group-append ">
       <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="ccestsub()" type="button" value="-" >  
      </div>
@@ -605,7 +605,7 @@ input:checked + .slider {
       <div class="input-group-prepend ">
       <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="cnestadd()" type="button" value="+">  
      </div>
-      <input type="number" class="form-control" id="ncredits" min="1" max="50"  placeholder="Enter no of credits taken now." onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <input type="number" class="form-control" id="ncredits" min="1" max="50"  placeholder="(max-50)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
       <div class="input-group-append ">
       <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="cnestsub()" type="button" value="-" >  
      </div>
@@ -794,7 +794,18 @@ input:checked + .slider {
       <input type="number" class="form-control" id="ptf" min="0" step="1" max="100" placeholder="max-100">
   </div>
 
+
+
+
+<br>
+ <div class="form-group">
+    <label><span class="badge badge-danger">Additional Learning:</span></label>
+      <input type="number" class="form-control" id="adl" min="0" step="1" max="10" placeholder="max-10">
+  </div>
+
+
 </div>
+
 
 
 <br>
@@ -2376,7 +2387,721 @@ input:checked + .slider {
 
 <script>
 
-//GradePredictor
+//All input limits
+document.getElementById("noc").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("noc").value="";
+        }
+        
+        if(input<1 || input>200)
+        {
+        alert("Value should be between 1 - 200");
+        document.getElementById("noc").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+    document.getElementById("one").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("one").value="";
+        }
+        
+        if(input<0 || input>150)
+        {
+        alert("Value should be between 0 - 150");
+        document.getElementById("one").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+    document.getElementById("two").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("two").value="";
+        }
+        
+        if(input<0 || input>150)
+        {
+        alert("Value should be between 0 - 150");
+        document.getElementById("two").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+    document.getElementById("cone").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("cone").value="";
+        }
+        
+        if(input<0 || input>100)
+        {
+        alert("Value should be between 0 - 100");
+        document.getElementById("cone").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+    document.getElementById("ctwo").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ctwo").value="";
+        }
+        
+        if(input<0 || input>100)
+        {
+        alert("Value should be between 0 - 100");
+        document.getElementById("ctwo").value="";
+      }
+
+      return;
+
+    }
+//---------------------------CGPA Estimator-------------------------------------------------------------------------
+
+document.getElementById("CGPAneed").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("CGPAneed").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("CGPAneed").value="";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("ccgpa").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ccgpa").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("ccgpa").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+    document.getElementById("ccredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ccredits").value="";
+        }
+        
+        if(input<1 || input>300)
+        {
+        alert("Value should be between 1 - 300");
+        document.getElementById("ccredits").value="";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("ncredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ncredits").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("ncredits").value="";
+      }
+
+      return;
+
+    }
+
+//--------------------------------semwise CGPA---------------------------------------------------------------------
+
+ document.getElementById("sem1c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem1c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem1c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem1g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem1g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem1g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("sem2c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem2c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem2c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem2g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem2g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem2g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+
+
+document.getElementById("sem3c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem3c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem3c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem3g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem3g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem3g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+document.getElementById("sem4c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem4c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem4c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem4g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem4g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem4g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+document.getElementById("sem5c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem5c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem5c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem5g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem5g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem5g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+document.getElementById("sem6c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem6c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem6c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem6g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem6g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem6g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+
+document.getElementById("sem7c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem7c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem7c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem7g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem7g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem7g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+document.getElementById("sem8c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem8c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem8c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem8g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem8g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem8g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+
+
+
+
+document.getElementById("sem9c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem9c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem9c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem9g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem9g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem9g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+document.getElementById("sem10c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem10c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem10c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem10g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem10g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem10g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+document.getElementById("sem11c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem11c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem11c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem11g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem11g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem11g").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+document.getElementById("sem12c").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem12c").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("sem12c").value="";
+      }
+
+      return;
+
+    }
+
+
+
+     document.getElementById("sem12g").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("sem12g").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("sem12g").value="";
+      }
+
+      return;
+
+    }
+
+//----------------------------------------------INSTANT CGPA--------------------------------------------------------
+
+document.getElementById("iccgpa").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("iccgpa").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("iccgpa").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+document.getElementById("iccredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("iccredits").value="";
+        }
+        
+        if(input<1 || input>300)
+        {
+        alert("Value should be between 1 - 300");
+        document.getElementById("iccredits").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+document.getElementById("iCGPAneed").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("iCGPAneed").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("iCGPAneed").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+document.getElementById("incredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("incredits").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("incredits").value="";
+      }
+
+      return;
+
+    }
+
+
+//------------------------------------------------------------------------------------------------------------------
 document.getElementById("pcat1").onkeyup=function(){
         var input=parseFloat(this.value);
         if(Number.isNaN(input)){
@@ -2570,6 +3295,22 @@ document.getElementById("pj3").onkeyup=function(){
 
 
 
+document.getElementById("adl").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("adl").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("adl").value="";
+      }
+
+      return;
+
+    }
+
 
 
 
@@ -2585,7 +3326,6 @@ document.getElementById('gradeform').reset();
   document.getElementById("gradepredr").innerHTML = "Form is at it's default state.";
     document.getElementById("gradepred1r").innerHTML = "You can proceed...";
 }
-
 
 function gradepred()
 {
@@ -2615,7 +3355,7 @@ var da1= parseFloat(document.getElementById("pdq1").value);
 var da2= parseFloat(document.getElementById("pdq2").value);
 var da3= parseFloat(document.getElementById("pdq3").value);
 var tfat= parseFloat(document.getElementById("ptf").value);
-
+var addlearn=parseFloat(document.getElementById("adl").value);
 
 
 
@@ -2740,19 +3480,33 @@ else{
 if(tc>0){
           if(tfat<40)
           {
-            document.getElementById("gradepred").innerHTML="You got lessthan 40 marks in Theory FAT.";
+          
+            document.getElementById("gradepred4").innerHTML="Oops!You got failed in this course.";
+     document.getElementById("gradepred1").innerHTML="";
+       document.getElementById("gradepred").innerHTML="You got lessthan 40 marks in Theory FAT.";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
           }
         
           
         
-         else if(tcm>=50){  
-          tcmadd= (tcm*(cc-lc-jc))/cc;
+         else{  
+          addlearn = addlearn || 0;
+          if((tcm+addlearn-tfatc)>=60){
+          tcmadd= ((60*(cc-lc-jc))/cc)+tfatc;
           
           }
+
+          else{
+             tcmadd= (((tcm+addlearn-tfatc)*(cc-lc-jc))/cc)+tfatc;
+
+          }
+
+        }
 
       }
      
-
+else{}
 
      var labintc=labint;
      var labfatc=(labfat*40)/50;
@@ -2761,6 +3515,13 @@ if(lc>0){
           if(labintc+labfatc<50)
           {
             document.getElementById("gradepred2").innerHTML="You got lessthan 50 marks in Lab Component.";
+         
+      document.getElementById("gradepred4").innerHTML="Oops!You got failed in this course.";
+
+     document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is F.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
           }
 
         
@@ -2772,7 +3533,7 @@ if(lc>0){
       }
 
 
-
+else{}
    
 
      var r1c=r1;
@@ -2781,9 +3542,16 @@ if(lc>0){
 
 
      if(jc>0){
-          if(r1c+r2c+r3c<50)
+          if((r1c+r2c+r3c)<50)
           {
             document.getElementById("gradepred3").innerHTML="You got lessthan 50 marks in J- Component.";
+          
+      document.getElementById("gradepred4").innerHTML="Oops!You got failed in this course.";
+
+     document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is F.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+      
           }
 
         
@@ -2796,7 +3564,7 @@ if(lc>0){
       }
 
         
-   
+   else{}
     
          tcmadd = tcmadd || 0;
          lcmadd = lcmadd || 0;
@@ -2807,86 +3575,87 @@ if(lc>0){
 
       var totalmarks=tcmadd+lcmadd+jcmadd;
 
-      if((r1c+r2c+r3c)<50 || (labintc+labfatc)<50 || tfat<40)
-      {
-       document.getElementById("gradepred1").innerHTML = "";
-      document.getElementById("gradepred4").innerHTML="Oops!You got failed in this course.";
    
-        }
+if(tfat>=40 && totalmarks<50){
+      if(totalmarks<50){
 
-      else if(totalmarks<50){
-     document.getElementById("gradepred").innerHTML = "";
      document.getElementById("gradepred4").innerHTML="Oops!You got failed in this course because your Final marks are lessthan 50% of total.";
-     document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is F."
-
+     document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is F.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
       }
-
-      else if(totalmarks>=90)
+    }
+else{
+      if(totalmarks>=90)
       {
-       document.getElementById("gradepred").innerHTML = "";
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepred3").innerHTML = "";
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is S.";
-
+       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is S.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
       }
 
       else if(totalmarks>=80)
       {
-       document.getElementById("gradepred").innerHTML = "";
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepre3").innerHTML = "";
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is A.";
-
+         document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is A.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
       }
 
       else if(totalmarks>=70)
       {
-        document.getElementById("gradepred").innerHTML = "";
-
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepre3").innerHTML = "";
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is B.";
+        document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is B.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
+        
 
       }
 
        else if(totalmarks>=60)
       {
-
-        document.getElementById("gradepred").innerHTML = "";
-
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepre3").innerHTML = "";
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is C.";
-
+ document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is C.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
+      
       }
 
 
        else if(totalmarks>=55)
       {
-       document.getElementById("gradepred").innerHTML = "";
-
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepre3").innerHTML = "";
-
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is D.";
+         document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is D.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
 
       }
 
 
        else if(totalmarks>=50)
       {
-       document.getElementById("gradepred").innerHTML = "";
-        document.getElementById("gradepred2").innerHTML = "";
-         document.getElementById("gradepre3").innerHTML = "";
-       document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks+" ~ "+Math.ceil(totalmarks);
-        document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is E.";
-
+        document.getElementById("gradepred4").innerHTML="Your Final marks for this course is "+totalmarks.toFixed(4)+" ~ "+Math.ceil(totalmarks);
+       document.getElementById("gradepred1").innerHTML="If this course is graded under Absolute grading, your grade is E.";
+       document.getElementById("gradepred").innerHTML="";
+         document.getElementById("gradepred2").innerHTML="";
+        document.getElementById("gradepred3").innerHTML="";
+         
+        
       }
+
+
+  }
      
       
 
@@ -2905,72 +3674,9 @@ if(lc>0){
 }
 
 
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
