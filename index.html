@@ -206,19 +206,12 @@ section{
 }
 
 .remain{
-	
+	position: absolute;
 	color: white;
-	
+	left: 0;
+	right: 0;
 width: 100%;
 height: 100%;
-	 display: block;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
 	
 }
 .containers{
@@ -303,6 +296,17 @@ input:checked + .slider {
 }
 
 
+.content {display:none;}
+.preload { 
+    width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+​
+
+
 @media only screen and (min-device-width : 768px)  
 { 
 
@@ -314,6 +318,7 @@ nav ul .nav-item:hover{
   
   
 }
+
 }
 
 </style>
@@ -323,6 +328,17 @@ nav ul .nav-item:hover{
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="ljgcaGEl"></script>
+
+
+
+<div class="preload">
+<img src="http://i.imgur.com/KUJoe.gif">
+</div>
+
+<div class="content">
+I would like to display a loading bar before the entire page is loaded. 
+</div>
+
 
 
 
@@ -2527,6 +2543,17 @@ nav ul .nav-item:hover{
 </div>
 
 <script>
+
+
+
+
+$(function() {
+    $(".preload").fadeOut(2000, function() {
+        $(".content").fadeIn(1000);        
+    });
+});​
+
+
 
 //All input limits
 document.getElementById("noc").onkeyup=function(){
