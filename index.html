@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="logos.png" type="image/gif">
   <meta name="author" content="Sabarish Reddy Remala">
-  <meta name="keywords" content="attendance Calculator VIT | grade predictor VIT | VIT grade calculator | VIT cgpa calculator | instant cgpa | VIT gpa calculator | grade vitian | gradevitan | grade vit | VIT attendance Calculator | gpa | calculator | VIT | calculation | semester | vellore | vellore institute of technology | FAT | exams | class | project | lab | vitian | theory | j component">
+  <meta name="keywords" content="attendance Calculator VIT | grade predictor VIT | VIT grade calculator | VIT cgpa calculator | instant cgpa | VIT gpa calculator | grade vitian | gradevitan | grade vit | VIT attendance Calculator | gpa | calculator | VIT | calculation, semester, vellore, vellore institute of technology, FAT | exams | class | project | lab | vitian | theory | j component">
   <meta name="description" content="Hey guys!Now VITians can calculate their attendance,gpa,cgpa,grades in gradevitian.in.All the info you need is at your finger tips.Then what are you waiting for?Its free,reliable,accurate and handier to use.It comprises of different sections named attendance calculator, CGPA estimator, Grade predictor, Grade calculator, GPA calculator, CGPA calculator.Have most out of it and Happy Learning." >
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -3579,7 +3579,7 @@ jc=parseInt(jc);
 
 if((tc+lc+jc)==0)
 {
-document.getElementById("gradepred").innerHTML = "Please select any one of the components(Theory,lab or J-comp) for the course you have choosen.";
+document.getElementById("gradepred").innerHTML = "Please select any one of the components(Theory, lab or J-comp) for the course you have choosen.";
 document.getElementById("gradepred1").innerHTML = "";
 document.getElementById("gradepred2").innerHTML = "";
 document.getElementById("gradepred3").innerHTML = "";
@@ -4555,14 +4555,14 @@ if( sem1g<0 || sem2g<0 || sem3g<0 || sem4g<0 || sem5g<0 || sem6g<0 || sem7g<0 ||
 
 else if( sem1g>10 || sem2g>10 || sem3g>10 || sem4g>10 || sem5g>10 || sem6g>10 || sem7g>10 || sem8g>10 || sem9g>10 || sem10g>10 || sem11g>10 || sem12g>10 || sem1c>50 || sem2c>50 || sem3c>50 || sem4c>50 || sem5c>50 || sem6c>50 || sem7c>50 || sem8c>50 || sem9c>50 || sem10c>50 || sem11c>50 || sem12c>50 ){
 
-	document.getElementById("alertcgpacal").innerHTML = "Please check the CREDITS and GPA limits;(0< CREDITS <=50)&(0< GPA <=10)";
+	document.getElementById("alertcgpacal").innerHTML = "Please check the CREDITS and GPA limits; (0< CREDITS <=50)&(0< GPA <=10)";
 	document.getElementById("alertcgpacal1").innerHTML = "";
 }
 
 
 
 else if((sem1c>0&&sem1g==0) || (sem2c>0&&sem2g==0) || (sem3c>0&&sem3g==0) || (sem4c>0&&sem4g==0) || (sem5c>0&&sem5g==0) || (sem6c>0&&sem6g==0) || (sem7c>0&&sem7g==0) || (sem8c>0&&sem8g==0) || (sem9c>0&&sem9g==0) || (sem10c>0&&sem10g==0) || (sem11c>0&&sem11g==0) || (sem12c>0&&sem12g==0) ){
-		document.getElementById("alertcgpacal").innerHTML = "GPA entries in the respective semesters aren't entered;where your credits are greater than zero (>0).";
+		document.getElementById("alertcgpacal").innerHTML = "GPA entries in the respective semesters aren't entered; where your credits are greater than zero (>0).";
 		document.getElementById("alertcgpacal1").innerHTML = "";
 	}
 
@@ -4683,7 +4683,7 @@ function icnestsub(){
        var nc = parseInt(document.getElementById("incredits").value); 
 
 if((x<=0 || gpa<=0 || cc<=0 || nc<=0)){
-  document.getElementById("iestcgpa").innerHTML = "Please check your entries; shouldn't be zero,negative,any special charecters,text or empty.";
+  document.getElementById("iestcgpa").innerHTML = "Please check your entries; shouldn't be zero, negative, any special charecters, text or empty.";
   document.getElementById("iestcgpa1").innerHTML = "";
 
 }
@@ -4864,7 +4864,7 @@ function cnestsub(){
        var nc = parseInt(document.getElementById("ncredits").value); 
 
 if((x<=0 || gpa<=0 || cc<=0 || nc<=0)){
-  document.getElementById("estcgpa").innerHTML = "Please check your entries; shouldn't be zero,negative,any special charecters,text or empty.";
+  document.getElementById("estcgpa").innerHTML = "Please check your entries; shouldn't be zero, negative, any special charecters, text or empty.";
   document.getElementById("estcgpa1").innerHTML = "";
 
 }
@@ -4886,8 +4886,8 @@ else{
    document.getElementById("estcgpa1").innerHTML = "";
   }
   else if(estnum1>10){
-    document.getElementById("estcgpa").innerHTML =nc+" Credit(s) you have taken aren't enough to get "+x+" CGPA."+"Excel in the upcomming semesters.";
-    document.getElementById("estcgpa1").innerHTML = "Just missed.You are at it.All the best !";
+    document.getElementById("estcgpa").innerHTML =nc+" Credit(s) you have taken aren't enough to get "+x+" CGPA."+" Excel in the upcomming semesters.";
+    document.getElementById("estcgpa1").innerHTML = "Just missed. You are at it. All the best !";
 
   }
   else if(estnum1>=9){
