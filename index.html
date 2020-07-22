@@ -24,6 +24,16 @@
   <script src="https://kit.fontawesome.com/ffe6cad6cd.js" crossorigin="anonymous"></script>
  
 <style type="text/css">
+	
+
+#loading{
+	position: fixed;
+	background: #fff url('preloader.gif') no-repeat center;
+	width:100%;
+	height:100%;
+	z-index: 99999;
+}
+	
 form label{
   font-family: 'Andika';font-size: 22px;
 } 
@@ -325,7 +335,7 @@ nav ul .nav-item:hover
 </style>
 </head>
 
-<body>
+<body onload="loadfunc()">
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="gahblLHL"></script>
@@ -335,6 +345,22 @@ nav ul .nav-item:hover
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="EMIJEjCQ"></script>
 
 
+	
+<div id="loading"></div>
+<script> 
+function loadfunc(){
+	var h=document.getElementById("loading");
+	h.style.display="none";
+
+}
+
+</script>
+	
+	
+	
+	
+	
+	
 
 <section>
 	<div class="set">
@@ -2239,7 +2265,7 @@ nav ul .nav-item:hover
         <!-- Modal body -->
         <div class="modal-body">
           <div class="alert alert-primary">
-       <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>If you are failed in a particular course in any of the semesters;kindly vist the GPA calculator section and calculate your GPA for that sem and proceed with this.</p> 
+       <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>If you are failed in a particular course(s) in any of the semesters;kindly visit the GPA calculator section and calculate your GPA <b>excluding failed course(s)</b> for that sem and proceed with this.</p> 
        <p id="alertcgpacalr" style="font-family: 'Alata';color: #4B0082;font-weight: bold" ></p>
        <strong id="alertcgpacal1r" style="font-family: 'Aleo';font-size: 19px;color: black;"></strong>
      </div>
