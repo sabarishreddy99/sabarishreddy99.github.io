@@ -4959,7 +4959,11 @@ else if(cc>300||nc>50){
 else{
 
   var estnum1=((x*(cc+nc))-(gpa*cc))/nc;
-  if(estnum1<=0){
+  if(isNaN(estnum1)){
+    document.getElementById("estcgpa").innerHTML = "Kindly fill all the entries.";
+    document.getElementById("estcgpa1").innerHTML = "Happy Learning :) ";
+  }
+  else if(estnum1<=0){
    document.getElementById("estcgpa").innerHTML = "Oops!Your entries are incorrect (or) You need not to attend your Final Examination."
    document.getElementById("estcgpa1").innerHTML = "";
   }
