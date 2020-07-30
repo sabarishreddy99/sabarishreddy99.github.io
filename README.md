@@ -6,4 +6,4 @@ For further queries, feel free to mail me at: sabarirjsr@gmail.com
 Code Files->
 HTML: gradeVITianhtml; 
  JavaScript: gradeVITianjavascript; 
- CSS:gradeVITiancss
+ CSS: gradeVITiancss
