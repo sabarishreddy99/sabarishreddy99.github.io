@@ -4,6 +4,6 @@ Now VITians can calculate their attendance, gpa, cgpa, grades in gradevitian.in.
 For further queries, feel free to mail me at: sabarirjsr@gmail.com
 
 Code Files->
-HTML: gradeVITianhtml
-JavaScript: gradeVITianjavascript 
-CSS:gradeVITiancss
+HTML: gradeVITianhtml; 
+ JavaScript: gradeVITianjavascript; 
+ CSS:gradeVITiancss
