@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>CGPA Estimator-gradeVITian</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="logos.png" type="image/gif">
+  <meta name="author" content="Sabarish Reddy Remala">
+  <meta name="keywords" content="attendance Calculator VIT, grade predictor VIT, VIT grade calculator, VIT cgpa calculator, instant cgpa, gpa calculator vit, grade vitian, gradevitan, grade vit, VIT attendance calculator, gpa calculator, VIT, calculation, semester, vellore, vellore institute of technology, FAT, exams, class, project, lab, vitian, theory, j component">
+  <meta name="description" content="Hey guys!Now VITians can calculate their attendance,gpa,cgpa,grades in gradevitian.in.All the info you need is at your finger tips.Then what are you waiting for?Its free,reliable,accurate and handier to use.It comprises of different sections named attendance calculator, CGPA estimator, Grade predictor, Grade calculator, GPA calculator, CGPA calculator.Have most out of it and Happy Learning." >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/ffe6cad6cd.js" crossorigin="anonymous"></script>
+ 
+<style type="text/css">
+	
+
+#loading{
+	position: fixed;
+	background: #fff url('preloader.gif') no-repeat center;
+	width:100%;
+	height:100%;
+	z-index: 99999;
+}
+	
+form label{
+  font-family: 'Andika';font-size: 22px;
+} 
+
+
+footer div a .zoom{
+  transition: transform .2s;
+}
+
+
+footer div a .zoom:hover{
+
+transform: scale(1.5); 
+}
+
+
+
+
+html{
+	overflow-x:hidden;
+	height:100%;
+	scroll-behavior: smooth;
+	
+}
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+}
+section{
+
+	position: fixed;
+	width:100%;
+	height: 100%;
+	background: linear-gradient(to bottom right, #003366 1%, #000000 98%);
+	overflow: hidden;
+}
+.set{
+	position: absolute;
+	height: 100%;
+	width:100%;
+	top:0;
+	left: 0;
+ 
+}
+.set div{
+	position: absolute;
+	display: block;
+}
+.set div:nth-child(1){
+	left:20%;
+	animation: animate 7s linear infinite;
+	animation-delay: -7s;
+}
+.set div:nth-child(2){
+	left:30%;
+	animation: animate 25s linear infinite;
+	animation-delay: -6s;
+}
+.set div:nth-child(3){
+	left:40%;
+	animation: animate 20s linear infinite;
+	animation-delay: -5s;
+}
+.set div:nth-child(4){
+	left:50%;
+	animation: animate 10s linear infinite;
+	animation-delay: -4s;
+}
+.set div:nth-child(5){
+	left:60%;
+	animation: animate 5s linear infinite;
+	animation-delay: -3s;
+}
+.set div:nth-child(6){
+	left:70%;
+	animation: animate 20s linear infinite;
+	animation-delay: -2s;
+}
+.set div:nth-child(7){
+	left:80%;
+	animation: animate 22s linear infinite;
+	animation-delay: -1s;
+}
+.set div:nth-child(8){
+	left:90%;
+	animation: animate 12s linear infinite;
+	animation-delay: -0s;
+}
+.set div:nth-child(9){
+	left:0%;
+	animation: animate 5s linear infinite;
+	animation-delay: -1s;
+}
+.set div:nth-child(10){
+	left:10%;
+	animation: animate 10s linear infinite;
+	animation-delay: -2s;
+}
+.set div:nth-child(11){
+	left:5%;
+	animation: animate 25s linear infinite;
+	animation-delay: -6s;
+}
+.set div:nth-child(12){
+	left:15%;
+	animation: animate 20s linear infinite;
+	animation-delay: -5s;
+}
+.set div:nth-child(13){
+	left:25%;
+	animation: animate 10s linear infinite;
+	animation-delay: -4s;
+}
+.set div:nth-child(14){
+	left:35%;
+	animation: animate 5s linear infinite;
+	animation-delay: -3s;
+}
+.set div:nth-child(15){
+	left:45%;
+	animation: animate 20s linear infinite;
+	animation-delay: -2s;
+}
+.set div:nth-child(16){
+	left:65%;
+	animation: animate 22s linear infinite;
+	animation-delay: -1s;
+}
+.set div:nth-child(17){
+	left:76%;
+	animation: animate 12s linear infinite;
+	animation-delay: -0s;
+}
+.set div:nth-child(18){
+	left:86%;
+	animation: animate 5s linear infinite;
+	animation-delay: -1s;
+}
+.set div:nth-child(19){
+	left:96%;
+	animation: animate 10s linear infinite;
+	animation-delay: -2s;
+}
+
+@keyframes animate{
+	0%{
+		opacity: 0;
+		top: -10%;
+		transform: translateX(20px) rotate(0deg);
+	}
+	10%{
+		opacity: 1;
+
+	}
+	20%{
+		transform: translateX(-20px) rotate(45deg);
+	}
+	40%{
+		transform: translateX(-20px) rotate(90deg);
+	}
+	60%{
+		transform: translateX(20px) rotate(135deg);
+	}
+	80%{
+		transform: translateX(-20px) rotate(180deg);
+	}
+	100%{
+		top: 110%;
+		transform: translateX(-20px) rotate(225deg);
+	
+	}
+}
+.set2{
+	transform: scale(2) rotateY(180deg);
+	filter: blur(2px);
+}
+.set3{
+	transform: scale(0.8) rotateX(180deg);
+	filter: blur(4px);
+}
+
+
+
+.remain{
+	position: absolute;
+	scroll-behavior: smooth;
+	color: white;
+	left: 0;
+	right: 0;
+width: 100%;
+height: 100%;
+	
+}
+
+
+.containers{
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	
+}
+
+.containers1{
+	border-radius: 10px;
+	background-color:white;
+	color: black;
+	
+}
+
+
+
+ .form-group input:focus,.input-group input:focus{
+    background-color: #7FFFD4;
+    color:black;
+  }
+
+  /* Toggle switch */
+.switch input { 
+    display:none;
+}
+
+.switch {
+    display:inline-block;
+    width:60px;
+    height:30px;
+    margin:8px;
+    transform:translateY(50%);
+    position:relative;
+}
+/* Style Wired */
+.slider {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius:30px;
+    box-shadow:0 0 0 2px #777, 0 0 4px #777;
+    cursor:pointer;
+    border:4px solid transparent;
+    overflow:hidden;
+     transition:.4s;
+}
+.slider:before {
+    position:absolute;
+    content:"";
+    width:100%;
+    height:100%;
+    background:#FAEBD7;
+    border-radius:30px;
+    transform:translateX(-30px);
+    transition:.4s;
+}
+
+input:checked + .slider:before {
+    transform:translateX(30px);
+    background:limeGreen;
+}
+input:checked + .slider {
+    box-shadow:0 0 0 2px limeGreen,0 0 2px limeGreen;
+}
+
+/* Style Flat */
+.switch.flat .slider {
+ box-shadow:none;
+}
+.switch.flat .slider:before {
+  background:#FAEBD7;
+}
+.switch.flat input:checked + .slider:before {
+ background:white;
+}
+.switch.flat input:checked + .slider {
+  background:limeGreen;
+}
+
+
+@media only screen and (min-device-width : 800px)  
+
+{ 
+
+
+nav ul .nav-item:hover
+{
+-ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  
+  
+}
+
+
+
+}
+
+
+
+</style>
+</head>
+
+<body onload="loadfunc()">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="gahblLHL"></script>
+
+
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="EMIJEjCQ"></script>
+
+
+	
+	
+	
+<div id="loading"></div>
+<script> 
+function loadfunc(){
+	var h=document.getElementById("loading");
+	h.style.display="none";
+
+}
+
+</script>
+	
+
+
+	
+	
+	
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<section>
+	<div class="set">
+	
+			<div><img style="width:11em;height: auto;" src="1.png" alt="VIT"></div>
+			<div><img style="width:8.5em;height: auto;" src="2.png" alt="vit cgpa calculator"></div>
+			<div><img style="width:7em;height: auto;" src="3.png" alt="vit gpa calculator"></div>
+			<div><img style="width:10em;height: auto;" src="4.png" alt="vit percentage"></div>
+			<div><img style="width:9em;height: auto;" src="5.png" alt="vit attendance Calculator"></div>
+			<div><img style="width:8.6em;height: auto;" src="6.png" alt="grade"></div>
+			<div><img style="width:6em;height: auto;" src="7.png" alt="vitian"></div>
+			<div><img style="width:10em;height: auto;" src="8.png" alt="vellore"></div>
+			<div><img style="width:6em;height: auto;" src="9.png" alt="vit grade calculator"></div>
+			<div><img style="width:9.5em;height: auto;" src="0.png" alt="FAT"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 2.png" alt="theory"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 3.png" alt="percentage"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 4.png" alt="computation"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 5.png" alt="gradevitian"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 6.png" alt="grade vit"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 7.png" alt="grade vit vellore"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 8.png" alt="CGPA"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 9.png" alt="gpa"></div>
+		
+	</div>
+	<div class="set set2">
+	
+			<div><img style="width:11em;height: auto;" src="1.png" alt="VIT"></div>
+			<div><img style="width:8.5em;height: auto;" src="2.png" alt="vit cgpa calculator"></div>
+			<div><img style="width:7em;height: auto;" src="3.png" alt="vit gpa calculator"></div>
+			<div><img style="width:10em;height: auto;" src="4.png" alt="vit percentage"></div>
+			<div><img style="width:9em;height: auto;" src="5.png" alt="vit attendance Calculator"></div>
+			<div><img style="width:8.6em;height: auto;" src="6.png" alt="grade"></div>
+			<div><img style="width:6em;height: auto;" src="7.png" alt="vitian"></div>
+			<div><img style="width:10em;height: auto;" src="8.png" alt="vellore"></div>
+			<div><img style="width:6em;height: auto;" src="9.png" alt="vit grade calculator"></div>
+			<div><img style="width:9.5em;height: auto;" src="0.png" alt="FAT"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 2.png" alt="theory"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 3.png" alt="percentage"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 4.png" alt="computation"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 5.png" alt="gradevitian"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 6.png" alt="grade vit"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 7.png" alt="grade vit vellore"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 8.png" alt="CGPA"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 9.png" alt="gpa"></div>
+		
+	</div>
+	
+	<div class="set set3">
+	
+			<div><img style="width:11em;height: auto;" src="1.png" alt="VIT"></div>
+			<div><img style="width:8.5em;height: auto;" src="2.png" alt="vit cgpa calculator"></div>
+			<div><img style="width:7em;height: auto;" src="3.png" alt="vit gpa calculator"></div>
+			<div><img style="width:10em;height: auto;" src="4.png" alt="vit percentage"></div>
+			<div><img style="width:9em;height: auto;" src="5.png" alt="vit attendance Calculator"></div>
+			<div><img style="width:8.6em;height: auto;" src="6.png" alt="grade"></div>
+			<div><img style="width:6em;height: auto;" src="7.png" alt="vitian"></div>
+			<div><img style="width:10em;height: auto;" src="8.png" alt="vellore"></div>
+			<div><img style="width:6em;height: auto;" src="9.png" alt="vit grade calculator"></div>
+			<div><img style="width:9.5em;height: auto;" src="0.png" alt="FAT"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 2.png" alt="theory"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 3.png" alt="percentage"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 4.png" alt="computation"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 5.png" alt="gradevitian"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 6.png" alt="grade vit"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 7.png" alt="grade vit vellore"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 8.png" alt="CGPA"></div>
+			<div><img style="width:4em;height: auto;" src="aac/Asset 9.png" alt="gpa"></div>
+		
+	</div>
+</section>
+
+
+<div class="remain">
+	
+
+<nav class="navbar navbar-expand-lg bg-warning navbar-dark fixed-top">
+  <a class="navbar-brand text-dark" href="#"><h3>grade<strong>vitian.in</strong></h3></a>
+  <button class="navbar-toggler navbar-toggler-right bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div   class="collapse navbar-collapse justify-content-end pull-lg-right" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li  class="nav-item ">
+        <a class="nav-link text-secondary" href="index.html"><h5>Attendance Calculator</h5></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-info" href="CGPA Estimator.html"><h5>CGPA Estimator</h5></a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link text-secondary" href="Grade Predictor.html"><h5>Grade Predictor</h5></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="GPA Calculator.html"><h5>GPA Calculator</h5></a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="CGPA Calculator.html"><h5>CGPA Calculator</h5></a>
+      </li>    
+      <li style="margin-left:4px;" class="nav-item">     
+         <a style="text-align:center;" class="navbar-brand text-dark" href="#comments"><h4><strong><i class="fas fa-comments"></i></strong></h4></a>
+      </li>  
+
+       <li class="nav-item">
+        
+         <a style="text-align:center;" class="navbar-brand text-dark" href="elucidation.html"><h4><strong><i class="fas fa-book-reader"></i></strong></h4></a>
+      </li>  
+     
+     <li class="nav-item">
+        
+         <a style="text-align:center;" class="navbar-brand text-dark" href="#foot"><h4><strong><i class="fas fa-id-card-alt"></i></strong></h4></a>
+      </li>  
+      
+    </ul>
+  </div>  
+</nav>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+<!----CGPA Estimator--->
+
+<div class="container containers" >
+	<br>
+<h2 style="text-align: center;font-family: 'Coiny';"><small>CGPA Estimator</small></h2>
+<br>
+  <form>
+   <div class="form-group">
+    <label>Do you Wanna be a <span class="badge badge-warning">__?__</span> Pointer?</label>
+      <input type="number" class="form-control" id="CGPAneed" min="0" value="9.00" step="0.05" max="10" placeholder="Desired CGPA?">
+  </div>
+   
+  
+
+
+    <div class="form-group">     
+      <label>Current CGPA:</label>
+      <input type="number" class="form-control" id="ccgpa" min="0" max="10" step="0.005" placeholder="Enter your current CGPA."/>
+  </div>
+
+
+
+<label>Total no of Credits Completed:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend ">
+      <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="ccestadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" id="ccredits" min="1" max="300"  placeholder="(max-300)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <div class="input-group-append ">
+      <input class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="ccestsub()" type="button" value="-" >  
+     </div>
+      </div>
+
+
+<label>No of Credits taken now:</label>
+    <div class="form-group input-group">
+      <div class="input-group-prepend ">
+      <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="cnestadd()" type="button" value="+">  
+     </div>
+      <input type="number" class="form-control" id="ncredits" min="1" max="50"  placeholder="(max-50)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" />
+      <div class="input-group-append ">
+      <input class="btn btn-warning pl-4 pr-4 font-weight-bold" onClick="cnestsub()" type="button" value="-" >  
+     </div>
+     </div>
+
+
+<br>
+    <div style="text-align: right;">
+  <input type="button" onClick="cgpaestimation()" class="btn btn-danger" data-toggle="modal" data-target="#myModalcgpaest" value="Estimate"/>
+   </div>
+
+
+ <!-- The Modal cgpa estimator -->
+  <div class="modal fade" id="myModalcgpaest">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+           <div class="alert alert-warning">
+       <p id="estcgpa" style="font-family: 'Aleo'; font-weight: bold;color: #00008B;" ></p>
+       <strong id="estcgpa1" style="font-family: 'Aleo';font-size: 19px;color: black;"></strong>
+     </div>
+
+        </div>
+
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  </form>
+  <br>
+</div>
+
+
+
+
+
+
+
+
+
+<br id="comments">
+
+
+
+
+
+<!---facebook plugin------------------------------->
+<div class="container containers1">
+<br>
+
+<h3 style="font-family: Andika;font-size: 22px;">Comments:</h3>
+<div class="fb-comments" data-href="https://gradevitian.in/" data-numposts="10" data-width="100%"></div>
+
+
+<div style="float: left;">
+  <a style="color: #191970;display: inline-block;margin-right: 10px;" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"><h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-linkedin" aria-hidden="true"></i></strong></h4></a>
+
+ <a style="color:#228B22;display: inline-block;" href="whatsapp://send?text=https://gradevitian.in/"><h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-whatsapp" aria-hidden="true"></i></strong></h4></a>
+</div>
+
+<div style="text-align: right">
+<div class="fb-like" data-href="https://gradevitian.in/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+
+</div>
+<br>
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<footer id="foot">
+	
+
+<div style="background:black;color:white;text-align: center;" class="container-fluid">
+  
+  	<br>
+ <h1><small>grade</small><strong><b style="color: #1E90FF;">vit</b>ian</strong>.in</h1>
+      
+       <i>Designed by</i>
+      <h5 ><b><a style="color: #DAA520;text-decoration: none;" href="tel:8190849408">Sabarish Reddy Remala</a></b></h5>
+      <p>Electrical Engineer. VIT,Vellore. <i class="fa fa-copyright" style="font-size:15px"></i> 2020</p> 
+     <p style="color:white;text-align:center;">Made with &#10084;&#65039; to all <b>VITians</b>.</p>
+      <a class="navbar-brand" href="mailto:sabarirjsr@gmail.com"><h4><strong><i class="fas fa-envelope-open-text zoom"></i></strong></h4></a><a>sabarirjsr@gmail.com</a>
+      <div>
+    <a style="color: red;" class="navbar-brand" href="https://www.youtube.com/channel/UCjvTrInXpvuMbBg4aEbkeQQ?view_as=subscriber"><h4><strong><i class="fab fa-youtube zoom"></i></strong></h4></a>
+
+    <a class="navbar-brand" href="https://linkedin.com/in/sabarishreddyrj"><h4><strong><i class="fab fa-linkedin zoom"></i></strong></h4></a>
+
+     <a style="color:#00BFFF;" class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006556459387"><h4><strong><i class="fab fa-facebook-square zoom"></i></strong></h4></a>
+
+     <a style="color:#FF4500;" class="navbar-brand" href="https://www.instagram.com/sabarish_reddi.rj/"><h4><strong><i class="fab fa-instagram zoom"></i></strong></h4></a>
+     </div>
+
+
+       
+   
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script>
+
+//All input limits
+
+//---------------------------CGPA Estimator-------------------------------------------------------------------------
+
+document.getElementById("CGPAneed").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("CGPAneed").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("CGPAneed").value="";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("ccgpa").onkeyup=function(){
+        var input=parseFloat(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ccgpa").value="";
+        }
+        
+        if(input<0 || input>10)
+        {
+        alert("Value should be between 0 - 10");
+        document.getElementById("ccgpa").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+    document.getElementById("ccredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ccredits").value="";
+        }
+        
+        if(input<1 || input>300)
+        {
+        alert("Value should be between 1 - 300");
+        document.getElementById("ccredits").value="";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("ncredits").onkeyup=function(){
+        var input=parseInt(this.value);
+        if(Number.isNaN(input)){
+              document.getElementById("ncredits").value="";
+        }
+        
+        if(input<1 || input>50)
+        {
+        alert("Value should be between 1 - 50");
+        document.getElementById("ncredits").value="";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+
+
+
+	//<!----CGPA Estimator--->
+
+function ccestadd(){
+	if(document.getElementById("ccredits").value==""){
+		document.getElementById("ccredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ccredits").value>=300){
+		document.getElementById("ccredits").value=300;
+		cgpaestimation();
+	}
+	else{
+	document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)+1;
+	cgpaestimation();
+}
+}
+function ccestsub(){
+	if(document.getElementById("ccredits").value==1){
+		document.getElementById("ccredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ccredits").value>=300){
+		document.getElementById("ccredits").value=300;
+		document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)-1;
+	cgpaestimation();
+	}
+	else{
+	document.getElementById("ccredits").value=parseInt(document.getElementById("ccredits").value)-1;
+	cgpaestimation();
+}
+}
+function cnestadd(){
+	if(document.getElementById("ncredits").value==""){
+		document.getElementById("ncredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ncredits").value>=50){
+		document.getElementById("ncredits").value=50;
+		cgpaestimation();
+	}
+	else{
+	document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)+1;
+	cgpaestimation();
+}
+}
+function cnestsub(){
+	if(document.getElementById("ncredits").value==1){
+		document.getElementById("ncredits").value=1;
+		cgpaestimation();
+	}
+	else if(document.getElementById("ncredits").value>=50){
+		document.getElementById("ncredits").value=50;
+		document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)-1;
+	    cgpaestimation();
+	}
+	else{
+	document.getElementById("ncredits").value=parseInt(document.getElementById("ncredits").value)-1;
+	cgpaestimation();
+}
+}
+
+
+
+
+	function cgpaestimation() 
+{      
+       var x = document.getElementById("CGPAneed").value;
+       var gpa = document.getElementById("ccgpa").value;
+       var cc = parseInt(document.getElementById("ccredits").value); 
+       var nc = parseInt(document.getElementById("ncredits").value); 
+
+if((x<=0 || gpa<=0 || cc<=0 || nc<=0)){
+  document.getElementById("estcgpa").innerHTML = "Please check your entries; shouldn't be zero or empty.";
+  document.getElementById("estcgpa1").innerHTML = "";
+
+}
+else if(x>10||gpa>10){
+  document.getElementById("estcgpa").innerHTML = "Please check your entries; Average limit(0< GPA or CGPA <=10).";
+  document.getElementById("estcgpa1").innerHTML = "";
+
+}
+else if(cc>300||nc>50){
+  document.getElementById("estcgpa").innerHTML = "Please check your entries; Credit limitation(1<= Credits Completed <=300 & 1<= Credits Taken <=50 ).";
+  document.getElementById("estcgpa1").innerHTML = "";
+
+}
+else{
+
+  var estnum1=((x*(cc+nc))-(gpa*cc))/nc;
+  if(estnum1<=0){
+   document.getElementById("estcgpa").innerHTML = "Oops!Your entries are incorrect (or) You need not to attend your Final Examination."
+   document.getElementById("estcgpa1").innerHTML = "";
+  }
+  else if(estnum1>10){
+    document.getElementById("estcgpa").innerHTML =nc+" Credit(s) you have taken aren't enough to get "+x+" CGPA."+" Excel in the upcomming semesters.";
+    document.getElementById("estcgpa1").innerHTML = "Just missed. You are at it. All the best !";
+
+  }
+  else if(estnum1>=9){
+document.getElementById("estcgpa").innerHTML = "Your minimum GPA in the next sem should be "+estnum1.toFixed(3)+".";
+document.getElementById("estcgpa1").innerHTML = "You are Terrific ! and Happy Learning !";
+}
+  else{
+document.getElementById("estcgpa").innerHTML = "Your minimum GPA in the next sem should be "+estnum1.toFixed(3)+".";
+document.getElementById("estcgpa1").innerHTML = "Happy Learning !";
+}
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
