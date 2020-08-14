@@ -311,7 +311,25 @@ input:checked + .slider {
   background:limeGreen;
 }
 
+@media only screen and (max-device-width : 600px)  {
 
+.numbers{
+	display: none;
+}
+section{
+
+	background: linear-gradient(to bottom right, #003366 1%, #000000 98%);
+}
+
+.containers{
+	border-radius: 10px;
+	background: linear-gradient(to bottom right, #003366 1%, #000000 98%);
+	color: white;
+	
+}
+}
+	
+	
 @media only screen and (min-device-width : 800px)  
 
 { 
@@ -395,6 +413,7 @@ function loadfunc(){
 	
 
 <section>
+<div class="numbers">
 	<div class="set">
 	
 			<div><img style="width:11em;height: auto;" src="1.png" alt="VIT"></div>
@@ -462,6 +481,7 @@ function loadfunc(){
 			<div><img style="width:4em;height: auto;" src="aac/Asset 9.png" alt="gpa"></div>
 		
 	</div>
+</div>
 </section>
 
 
