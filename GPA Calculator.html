@@ -2027,25 +2027,25 @@ var gpa11=parseInt(ggrad11*gcred11);
 var gpa12=parseInt(ggrad12*gcred12);
 
 
-var	finalgpacal=((gpa1+gpa2+gpa3+gpa4+gpa5+gpa6+gpa7+gpa8+gpa9+gpa10+gpa11+gpa12)/(gcred1 + gcred2 + gcred3 + gcred4 + gcred5 + gcred6 + gcred7 + gcred8 + gcred9 + gcred10 + gcred11 + gcred12));
+var finalgpacal=((gpa1+gpa2+gpa3+gpa4+gpa5+gpa6+gpa7+gpa8+gpa9+gpa10+gpa11+gpa12)/(gcred1 + gcred2 + gcred3 + gcred4 + gcred5 + gcred6 + gcred7 + gcred8 + gcred9 + gcred10 + gcred11 + gcred12));
 
 finalgpacal = finalgpacal || 0;
 
 if(finalgpacal>=9){
 			document.getElementById("alertgpacal").innerHTML = "Your GPA is "+finalgpacal.toFixed(4);
-			document.getElementById("alertgpacal1").innerHTML = "You are awesome! Keep it up and Happy Learning!";
+			document.getElementById("alertgpacal1").innerHTML = "You are awesome!&#129312; Keep it up and Happy Learning!";
 		}
 		else if(finalgpacal>=8){
 			document.getElementById("alertgpacal").innerHTML = "Your GPA is "+finalgpacal.toFixed(4);
-			document.getElementById("alertgpacal1").innerHTML = "You are at it. Excel in upcomming semesters.I'm very eager to see you as 9 pointer.";
+			document.getElementById("alertgpacal1").innerHTML = "You are at it &#128522;. Excel in upcomming semesters.I'm very eager to see you as 9 pointer.";
 		}
 		else if(finalgpacal==0){
 			document.getElementById("alertgpacal").innerHTML = "Your GPA is "+finalgpacal.toFixed(4);
-			document.getElementById("alertgpacal1").innerHTML = "I didn't get any input from you :( (or) You got all N/F grades.";
+			document.getElementById("alertgpacal1").innerHTML = "I didn't get any input from you &#128543; (or) You got all N/F grades.&#129301;";
 		}
 		else{
 		document.getElementById("alertgpacal").innerHTML ="Your GPA is "+finalgpacal.toFixed(4);
-		document.getElementById("alertgpacal1").innerHTML = "Happy Learning!";
+		document.getElementById("alertgpacal1").innerHTML = "Happy Learning!&#128522;";
 	}
 
 }
