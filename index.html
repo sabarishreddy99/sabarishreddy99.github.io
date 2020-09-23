@@ -21,6 +21,7 @@
   <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Caveat Brush" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/ffe6cad6cd.js" crossorigin="anonymous"></script>
  
 <style type="text/css">
@@ -376,7 +377,7 @@ nav ul .nav-item:hover
 </style>
 </head>
 
-<body onload="loadfunc()">
+<body onload="loadfunc(); typeWriter()">
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="gahblLHL"></script>
@@ -629,6 +630,54 @@ function loadfunc(){
 <br>
 <br>
 
+	
+	
+	
+	
+	
+	
+	<div class="container">
+        <p style="font-family: 'Caveat Brush'; font-size:22px;text-align: center;">
+          <span class="hello" id="hello"> </span>
+
+          <p id="typing" style="display: none;">
+            Hello, a warm welcome to you. I will help you in computing grades,
+            attendance %, GPA & CGPA.
+          </p>
+        </p>
+      </div>
+      <script>
+      var i = 0;
+        var txt = document.getElementById("typing").innerHTML;
+        var speed = 100;
+        
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("hello").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 <div class="container containers" >
