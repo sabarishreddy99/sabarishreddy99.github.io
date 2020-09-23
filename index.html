@@ -638,7 +638,7 @@ function loadfunc(){
 	
 	<div class="container">
         <p style="font-family: 'Caveat Brush'; font-size:22px;text-align: center;">
-          <span class="hello" id="hello"> </span>
+          <span class="hello" id="hello" style="display: "";"> </span>
 
           <p id="typing" style="display: none;">
             Hello, a warm welcome to you. I will help you in computing grades,
@@ -657,7 +657,14 @@ function loadfunc(){
             i++;
             setTimeout(typeWriter, speed);
           }
-        }</script>
+        }
+	 function hidingtype(){
+              document.getElementById("hello").style.display="none";
+        }
+        setTimeout("hidingtype()", 20000);
+
+	
+	</script>
 	
 	
 	
