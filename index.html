@@ -636,35 +636,38 @@ function loadfunc(){
 	
 	
 	
-	<div class="container" style="display: "";" id="typingsection">
-        <p style="font-family: 'Caveat Brush'; font-size:22px;text-align: center;">
-          <span class="hello" id="hello"> </span>
-
-          <p id="typing" style="display: none;">
-            Hello, a warm welcome to you. I will help you in computing grades,
-            attendance %, GPA, CGPA.
-          </p>
-        </p>
+	<div
+        class="container"
+        id="hello"
+        style="text-align: center; display: none"
+      >
+        <div
+          class="alert alert-dark alert-dismissible fade show"
+          style="text-align: center"
+        >
+          <strong
+            ><button type="button" class="close" data-dismiss="alert">
+              &times;
+            </button></strong
+          >
+          <strong>Hello, </strong>a warm welcome to you. I will help you in
+          computing
+          <span style="font-style: italic; color: black"
+            >grades, attendance %, GPA & CGPA</span
+          >. Have access to various formats by
+          <i style="font-size: 16px; color: green" class="fas fa-toggle-on"></i>
+        </div>
       </div>
+
       <script>
-      var i = 0;
-        var txt = document.getElementById("typing").innerHTML;
-        var speed = 100;
-        
         function typeWriter() {
-          if (i < txt.length) {
-            document.getElementById("hello").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
+          document.getElementById("hello").style.display = "block";
         }
-	 function hidingtype(){
-              document.getElementById("typingsection").style.display="none";
+        function hidingtype() {
+          document.getElementById("hello").style.display = "none";
         }
         setTimeout("hidingtype()", 20000);
-
-	
-	</script>
+      </script>
 	
 	
 	
