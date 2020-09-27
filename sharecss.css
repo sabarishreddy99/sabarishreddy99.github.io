@@ -1,0 +1,32 @@
+#shareicon{
+  z-index: 9;
+  position: fixed;
+  right: 3.5%;
+  bottom: 4%;
+  border-radius: 50%;
+  background-color: white;
+  color: #008080;
+   border: 1px solid black;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+#shareicon:hover{
+  color: white;
+  background-color: #008080;
+}
+
+@media only screen and (min-device-width : 800px)  {
+  #shareicon{
+  right: 2%;
+  bottom: 3%;
+  background-color: #008080;
+  color:white;
+  }
+  #shareicon:hover{
+    color:#008080;
+    background-color: white;
+  }
+}
+
+
