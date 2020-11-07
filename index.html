@@ -27,7 +27,25 @@
 	<script data-ad-client="ca-pub-2577856688906575" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
  
 <style type="text/css">
+
 	
+  #scrolltop {
+      animation: transit 1.5s infinite;
+
+    }
+
+    @keyframes transit {
+      from {
+        opacity: 0;
+
+      }
+
+      to {
+        opacity: 1;
+
+      }
+
+    }
 
 #loading{
 	position: fixed;
@@ -686,17 +704,37 @@ function loadfunc(){
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-         <a href="#share" class="btn" style="border-radius: 50%;" id="shareicon">
-        <h4><i data-toggle="modal" data-target="#shareicons" style="cursor: pointer;" class="fas fa-share-square"></i>
-        </h4>
-      </a>
+	<button
+        style="display:none;position: fixed; z-index: 999;bottom: 20px;right:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 50%;"
+        class="btn btn-dark" onclick="topFunction()" id="myBtn" title="Go to top"><i id="scrolltop"
+          class="fas fa-angle-double-up"></i></button>
+      <button
+        style="display:block;position: fixed; z-index: 999;bottom: 20px;left:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 50%;color: #B8860B;background-color: #000000;"
+        class="btn" onclick="" id="" title="share" data-toggle="modal" data-target="#shareicons"><i class="fas fa-share-alt"></i></button>
+
+
+      <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+
 
 
 
