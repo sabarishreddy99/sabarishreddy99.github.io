@@ -609,7 +609,7 @@ function loadfunc(){
   <div   class="collapse navbar-collapse justify-content-end pull-lg-right" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li  class="nav-item ">
-        <a class="nav-link text-info" href="https://gradevitian.in/"><h5>Attendance Calculator</h5></a>
+        <a class="nav-link text-info" href="https://gradevitian.in/"><h5>Grade Predictor</h5></a>
       </li>
 
       <li class="nav-item">
@@ -617,7 +617,7 @@ function loadfunc(){
       </li>
 
        <li class="nav-item">
-        <a class="nav-link text-secondary" href="Grade Predictor.html"><h5>Grade Predictor</h5></a>
+        <a class="nav-link text-secondary" href="Attendance Calculator.html"><h5>Attendance Calculator</h5></a>
       </li>
 
       <li class="nav-item">
@@ -792,533 +792,777 @@ function loadfunc(){
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+    <!---GradePredictor--->
+    <div class="container containers">
+      <br>
+      <h2 style="text-align: center;font-family: 'Coiny';"><small>Grade Predictor</small></h2>
 
 
-<div class="container containers" >
-
-	<!---Attendance Calculator--->
- <br>
- <h2 style="text-align: center;font-family: 'Coiny';"><small>Attendance Calculator</small></h2>
- <br>
-  <form>
-
-        <div >
-        <label style="float: right;" class="switch">
-            <input type="checkbox" href="#switch" class="custom-control-input" id="switch1" data-toggle="collapse" name="example">
-            <span class="slider"></span>
-        </label>
-         <br>
-          <br>
+      <div style="text-align: center;">
+        <strong style="color: #B8860B;">New Feature!</strong>
+        <p style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;"> Hey guys! Now you can predict your
+          grades
+          <i style="color: darkgreen;" class="fas fa-check-circle"></i> (or) <i style="color: darkred;"
+            class="fas fa-times-circle"></i> <b>FAT</b>
+          marks.</p>
       </div>
 
 
-    
-    <div id="switch" class="collapse">
-    <h2 style="text-align: center;font-family: 'Audiowide';"><small>Format-2</small></h2>
-  
-  	<label for="noc">Total classes:</label>
-    <div class="form-group input-group">
-      <div class="input-group-prepend ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="tclassesadd()" type="button" value="+">  
-     </div>
-      <input type="number" class="form-control" id="noc" min="1" max="300" step="1" value="10" placeholder="(max-200)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
-      <div class="input-group-append ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-primary pl-4 pr-4 font-weight-bold" onClick="tclassessub()" type="button" value="-" >  
-     </div>
+
+      <br>
+      <form id="gradeform">
+
+        <div>
+
+          <label>Total Course Credits:</label>
+          <select class="form-control" id="pcc">
+            <option selected="selected">Course credits</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>20</option>
+          </select>
+
+
+        </div>
+
+        <br>
+
+
+        <label>Opt Theory,Lab & J-comp Credits</label>
+        <div class="form-row">
+          <div class="col">
+
+            <select class="form-control" id="ptc">
+              <option selected="selected">Theory credits</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+
+
+
+          <div class="col">
+
+            <select class="form-control" id="plc">
+              <option selected="selected">Lab credits</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+
+
+
+          <div class="col">
+
+            <select class="form-control" id="pjc">
+              <option selected="selected">J-comp credits</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>20</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <br>
+        <br>
+        <div>
+
+
+          <label style="float: right;" class="switch">
+            <input type="checkbox" href="#gradepredtheoryswitch" class="custom-control-input" id="gradepredswitch1"
+              data-toggle="collapse" name="example">
+            <span class="slider"></span>
+          </label>
+          <h2 style="text-align: center;font-family: 'Audiowide';"><small>Theory Component</small></h2>
+          <br>
+          <br>
+        </div>
+
+        <div id="gradepredtheoryswitch" class="collapse">
+
+
+          <div class="form-row">
+            <div class="col">
+              <label><span class="badge badge-info">CAT-1</span></label>
+              <input type="number" class="form-control" id="pcat1" min="0" step="1" max="50" placeholder="max-50" />
+            </div>
+            <div class="col">
+              <label><span class="badge badge-info">CAT-2</span></label>
+              <input type="number" class="form-control" id="pcat2" min="0" step="1" max="50" placeholder="max-50" />
+            </div>
+
+          </div>
+
+          <br>
+          <div class="form-row">
+            <div class="col">
+              <label><span class="badge badge-warning">DA/Quiz</span></label>
+              <input type="number" class="form-control" id="pdq1" min="0" step="1" max="10" placeholder="max-10">
+            </div>
+
+            <div class="col">
+              <label><span class="badge badge-warning">DA/Quiz</span></label>
+              <input type="number" class="form-control" id="pdq2" min="0" step="1" max="10" placeholder="max-10">
+            </div>
+
+            <div class="col">
+              <label><span class="badge badge-warning">DA/Quiz</span></label>
+              <input type="number" class="form-control" id="pdq3" min="0" step="1" max="10" placeholder="max-10">
+            </div>
+
+          </div>
+          <br>
+
+          <h4 style="text-align: center;"><span class="badge"
+              style="text-align: center;background-color:#FF6347;color: #000000;"><i
+                class="fas fa-exclamation-circle"></i> Compute
+              excluding <b>FAT</b>
+              <input style="width: 16px;height:16px;" type="checkbox" id="withouttfat" onclick="tfatcheck()" /></span>
+          </h4>
+
+
+          <script>
+            function tfatcheck() {
+              var x = document.getElementById("withouttfat");
+              if (x.checked == true) {
+                document.getElementById("ptf").disabled = true;
+                if (document.getElementById("ptf").value > -1) {
+                  document.getElementById("ptf").value = "";
+                }
+                document.getElementById("ptf").placeholder = "You can skip this..";
+
+              }
+              else {
+                document.getElementById("ptf").disabled = false;
+                document.getElementById("ptf").placeholder = "max-100";
+              }
+            }
+
+
+          </script>
+
+
+
+          <br>
+          <div class="form-group">
+            <label><span class="badge badge-success">Final Assesment Test:</span></label>
+            <input type="number" class="form-control" id="ptf" min="0" step="1" max="100" placeholder="max-100">
+          </div>
+
+
+
+
+          <br>
+          <div class="form-group">
+            <label><span class="badge badge-dark">Additional Learning:</span></label>
+            <input type="number" class="form-control" id="adl" min="0" step="1" max="10" placeholder="max-10">
+          </div>
+
+
+        </div>
+
+
+
+        <br>
+
+        <div>
+
+
+          <label style="float: right;" class="switch">
+            <input type="checkbox" href="#gradepredlabswitch" class="custom-control-input" id="gradepredswitch2"
+              data-toggle="collapse" name="example">
+            <span class="slider"></span>
+          </label>
+          <h2 style="text-align: center;font-family: 'Audiowide';"><small>Lab Component</small></h2>
+          <br>
+          <br>
+        </div>
+
+
+
+        <div id="gradepredlabswitch" class="collapse">
+
+          <div class="form-group">
+            <label><span class="badge badge-secondary">Lab Internals:</span></label>
+            <input type="number" class="form-control" id="pli" min="0" step="1" max="60" placeholder="max-60">
+          </div>
+          <br>
+
+          <h4 style="text-align: center;"><span class="badge"
+              style="text-align: center;background-color:#FF6347;color: #000000;"><i
+                class="fas fa-exclamation-circle"></i> Compute
+              excluding <b>LAB FAT</b>
+              <input style="width: 16px;height:16px;" type="checkbox" id="withoutlfat" onclick="lfatcheck()" /></span>
+          </h4>
+
+
+          <script>
+            function lfatcheck() {
+              var x = document.getElementById("withoutlfat");
+              if (x.checked == true) {
+                document.getElementById("plf").disabled = true;
+                if (document.getElementById("plf").value > -1) {
+                  document.getElementById("plf").value = "";
+                }
+                document.getElementById("plf").placeholder = "You can skip this..";
+
+              }
+              else {
+                document.getElementById("plf").disabled = false;
+                document.getElementById("plf").placeholder = "max-50";
+              }
+            }
+
+
+          </script>
+
+
+
+          <br>
+          <div class="form-group">
+            <label><span class="badge badge-primary">Lab FAT:</span></label>
+            <input type="number" class="form-control" id="plf" min="0" step="1" max="100" placeholder="max-50">
+          </div>
+
+        </div>
+
+
+
+
+
+        <br>
+
+
+
+        <div>
+
+
+          <label style="float: right;" class="switch">
+            <input type="checkbox" href="#gradepredjswitch" class="custom-control-input" id="gradepredswitch3"
+              data-toggle="collapse" name="example">
+            <span class="slider"></span>
+          </label>
+          <h2 style="text-align: center;font-family: 'Audiowide';"><small>J Component</small></h2>
+          <br>
+          <br>
+        </div>
+
+
+
+        <div id="gradepredjswitch" class="collapse">
+          <div class="form-row">
+            <div class="col">
+              <label><span class="badge badge-warning">Review-1</span></label>
+              <input type="number" class="form-control" id="pj1" min="0" step="1" max="20" placeholder="max-20">
+            </div>
+
+            <div class="col">
+              <label><span class="badge badge-warning">Review-2</span></label>
+              <input type="number" class="form-control" id="pj2" min="0" step="1" max="30" placeholder="max-30">
+            </div>
+
+            <div class="col">
+              <label><span class="badge badge-warning">Review-3</span></label>
+              <input type="number" class="form-control" id="pj3" min="0" step="1" max="50" placeholder="max-50">
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <br>
+        <div class="alert alert-warning">
+          <strong style="color: black;"><i class="fas fa-exclamation-circle"></i></strong> Toggle <i
+            style="font-size: 16px; color: green" class="fas fa-toggle-on"></i> each component if
+          you want to use them.
+        </div>
+        <br>
+
+        <div>
+          <input style="float: right;" type="button" onClick="landtgradepred()" class="btn btn-danger"
+            data-toggle="modal" data-target="#myModalgradepred" value="Compute" />
+          <input style="float: left;" type="button" onClick="gradepredform()" class="btn btn-primary"
+            data-toggle="modal" data-target="#myModalgradepredreset" value="Reset" />
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="myModalgradepred">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="alert alert-warning">
+                  <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>Toggle each
+                    component if you want to use them.</p>
+                  <p id="gradepred" style="font-family: 'Alata';color: #4B0082;"></p>
+                  <p id="gradepred2" style="font-family: 'Alata';color: #4B0082;"></p>
+                  <p id="gradepred3" style="font-family: 'Alata';color: #4B0082;"></p>
+                  <p id="gradepred4" style="font-family: 'Alata';color: #4B0082;"></p>
+                  <strong id="gradepred1" style="font-family: 'Aleo';font-size: 19px;color: black;"></strong>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="myModalgradepredreset">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"><strong style="color: #DC143C;">Info & Alerts:</strong></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="alert alert-warning">
+                  <p style="font-family: 'Alata';font-weight:italic ;color: black;"><strong>Note:</strong>Toggle each
+                    component if you want to use them.</p>
+                  <p id="gradepredr" style="font-family: 'Alata';color: #4B0082;"></p>
+                  <strong id="gradepred1r" style="font-family: 'Aleo';font-size: 19px;color: black;"></strong>
+                </div>
+              </div>
+
+
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </form>
+
+      <br>
+      <br>
+      <br>
     </div>
 
 
-    <label for="one">&#9989; Classes Present:</label>
-    <div class="form-group input-group">
-       <div class="input-group-prepend ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-info pl-4 pr-4 font-weight-bold" id="paddons" onClick="pclassesadd()" type="button" value="+">  
-     </div>
-      <input type="number" class="form-control" min="1" step="1" max="300" id="one" placeholder="(max-150)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
-      <div class="input-group-append ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-info pl-4 pr-4 font-weight-bold" id="paddons1" onClick="pclassessub()" type="button" value="-" >  
-     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br id="comments">
+
+
+
+
+
+    <!---facebook plugin------------------------------->
+    <div class="container containers1">
+      <br>
+
+      <h3 style="font-family: Andika;font-size: 22px;">Comments:</h3>
+      <div class="fb-comments" data-href="https://gradevitian.in/" data-numposts="10" data-width="100%"></div>
+
+      <div class="gradevideo">
+        <br>
+        <iframe style="text-align: center;" width=100% height="300px" src="https://www.youtube.com/embed/OotrfsCwrpE"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <br>
+        <br>
+      </div>
+
+
+
+      <div style="float: left;">
+        <a style="color: #191970;display: inline-block;margin-right: 10px;"
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F">
+          <h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-linkedin"
+                aria-hidden="true"></i></strong></h4>
+        </a>
+
+        <a style="color:#228B22;display: inline-block;" href="whatsapp://send?text=https://gradevitian.in/">
+          <h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-whatsapp"
+                aria-hidden="true"></i></strong></h4>
+        </a>
+      </div>
+
+      <div style="text-align: right">
+        <div class="fb-like" data-href="https://gradevitian.in/" data-width="" data-layout="button_count"
+          data-action="like" data-size="large" data-share="true"></div>
+
+      </div>
+      <br>
+
+
+
     </div>
 
 
-    <div style="text-align: center;color:black;">
-      <span class="badge badge-warning">OR</span> 
-    </div>
 
 
 
 
-     <label for="two">&#10062; Classes Absent: <span class="badge badge-secondary" style="font-family: ABeeZee;"> >= 1</span> :</label>
-    <div class="form-group input-group">
-      <div class="input-group-prepend ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-danger pl-4 pr-4 font-weight-bold" id="aaddons" onClick="aclassesadd()" type="button" value="+">  
-     </div>
-      <input type="number" class="form-control" min="1" max="300" step="1" id="two" placeholder="(max-150)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
-      <div class="input-group-append ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-danger pl-4 pr-4 font-weight-bold" id="aaddons1" onClick="aclassessub()" type="button" value="-" >  
-     </div>
-    </div>
 
 
 
-      <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:50%">
-      <50%
-    </div>
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:25%">
-      <span style="color: black;"><75%</span>
-    </div>
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:25%">
-      >=75%
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+
+    <footer id="foot">
+
+
+      <div style="background:black;color:white;text-align: center;" class="container-fluid">
+
+        <br>
+        <h1><small>grade</small><strong><b style="color: #1E90FF;">vit</b>ian</strong>.in</h1>
+
+        <i>Designed by</i>
+        <h5><b><a style="color: #DAA520;text-decoration: none;" href="tel:8190849408">Sabarish Reddy Remala</a></b></h5>
+        <p>Electrical Engineer. VIT,Vellore. <i class="fa fa-copyright" style="font-size:15px"></i> 2020</p>
+        <p style="color:white;text-align:center;">Made with &#10084;&#65039; to all <b>VITians</b>.</p>
+        <a class="navbar-brand" href="mailto:sabarirjsr@gmail.com">
+          <h4><strong><i class="fas fa-envelope-open-text zoom"></i></strong></h4>
+        </a><a>sabarirjsr@gmail.com</a>
+        <div>
+          <a style="color: red;" class="navbar-brand"
+            href="https://www.youtube.com/channel/UCjvTrInXpvuMbBg4aEbkeQQ?view_as=subscriber">
+            <h4><strong><i class="fab fa-youtube zoom"></i></strong></h4>
+          </a>
+
+          <a class="navbar-brand" href="https://linkedin.com/in/sabarishreddyrj">
+            <h4><strong><i class="fab fa-linkedin zoom"></i></strong></h4>
+          </a>
+
+          <a style="color:#00BFFF;" class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006556459387">
+            <h4><strong><i class="fab fa-facebook-square zoom"></i></strong></h4>
+          </a>
+
+          <a style="color:#FF4500;" class="navbar-brand" href="https://www.instagram.com/sabarish_reddi.rj/">
+            <h4><strong><i class="fab fa-instagram zoom"></i></strong></h4>
+          </a>
+        </div>
+
+
+
+
+      </div>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
-     <br>
-    
-    <div class="alert alert-info  fade show">
-       <strong >&#11088;Info & Alerts:</strong>
-       <p style="font-family: 'Alata';color: black;"><strong>Note:</strong>Use either any one of the entries(Classes Present or Classes Absent).</p> 
-        <div class="progress" style="height:20px;">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%;height:20px;" id="bar"></div>
-  </div>
-     
-   <p style="font-family: 'Alata';color: black;" id="result2">out of &#128175;</p> 
-	   
-	   
 
-  </div>
+  <script>
 
-  
-<br>
+    //All input limits
+    document.getElementById("pcat1").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pcat1").value = "";
+      }
 
+      if (input < 0 || input > 50) {
+        alert("Value should be between 0 - 50");
+        document.getElementById("pcat1").value = "";
+      }
 
-    <div style="text-align: right;">
-  <input type="button" onClick="divideBy()" class="btn btn-danger" value="Compute"/>
-   </div>
-	    
-	    
-	    
-	          <br>
-          <h2 style="text-align: center; font-family: 'Audiowide'">
-            <small>Format-1</small>
-          </h2>
+      return;
 
+    }
 
-  </div>
 
+    document.getElementById("pcat2").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pcat2").value = "";
+      }
 
-
-	      
-	 
-
-
-
-
-
-
-
-
-
-
-
-
- <label for="cone">&#9989; Classes Present:</label>
-    <div class="form-group input-group">
-       <div class="input-group-prepend ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons" onClick="cpclassesadd()" type="button" value="+">  
-     </div>
-      <input type="number" class="form-control" min="1" step="1" max="300" id="cone" placeholder="(max-100)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
-      <div class="input-group-append ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-info pl-4 pr-4 font-weight-bold" id="cpaddons1" onClick="cpclassessub()" type="button" value="-" >  
-     </div>
-    </div>
-
-
-
-
-
-     <label for="ctwo">&#10062; Classes Absent:</label>
-    <div class="form-group input-group">
-      <div class="input-group-prepend ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-danger pl-4 pr-4 font-weight-bold" id="caaddons" onClick="caclassesadd()" type="button" value="+">  
-     </div>
-      <input type="number" class="form-control" min="1" max="300" step="1" id="ctwo" placeholder="(max-100)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" >
-      <div class="input-group-append ">
-      <input style="font-weight: 900; font-family: sans-serif ;" class="btn btn-danger pl-4 pr-4 font-weight-bold" id="caaddons1" onClick="caclassessub()" type="button" value="-" >  
-     </div>
-    </div>
-
-
-
-      <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:50%">
-      <50%
-    </div>
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:25%">
-      <span style="color: black;"><75%</span>
-    </div>
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:25%">
-      >=75%
-    </div>
-  </div>
-     <br>
-    
-    <div class="alert alert-info  fade show">
-       <strong >&#11088;Info & Alerts:</strong>
-       
-        <div class="progress" style="height:20px;">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%;height:20px;" id="cbar"></div>
-  </div>
-     
-   <p style="font-family: 'Alata';color: black;" id="cresult2">out of &#128175;</p> 
-	    
-	     
-
-  </div>
-
-<br>
-
-
-    <div style="text-align: right;">
-  <input type="button" onClick="cdivideBy()" class="btn btn-danger" value="Compute"/>
-   </div>
-
-  </form>
-  <br> 
-</div>
-
-
-
-
-
-
-
-
-
-<br id="comments">
-
-
-
-
-
-<!---facebook plugin------------------------------->
-<div class="container containers1">
-<br>
-
-<h3 style="font-family: Andika;font-size: 22px;">Comments:</h3>
-<div class="fb-comments" data-href="https://gradevitian.in/" data-numposts="10" data-width="100%"></div>
-	
-<div class="gradevideo">
-<br>
-<iframe style="text-align: center;" width=100% height="300px" src="https://www.youtube.com/embed/OotrfsCwrpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>
-<br>
-</div>
-
-
-
-<div style="float: left;">
-  <a style="color: #191970;display: inline-block;margin-right: 10px;" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"><h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-linkedin" aria-hidden="true"></i></strong></h4></a>
-
- <a style="color:#228B22;display: inline-block;" href="whatsapp://send?text=https://gradevitian.in/"><h4><strong><i style="font-size: 30px;font-weight: bold;" class="fa fa-whatsapp" aria-hidden="true"></i></strong></h4></a>
-</div>
-
-<div style="text-align: right">
-<div class="fb-like" data-href="https://gradevitian.in/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
-
-</div>
-<br>
-
-
-
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-<footer id="foot">
-	
-
-<div style="background:black;color:white;text-align: center;" class="container-fluid">
-  
-  	<br>
- <h1><small>grade</small><strong><b style="color: #1E90FF;">vit</b>ian</strong>.in</h1>
-      
-       <i>Designed by</i>
-      <h5 ><b><a style="color: #DAA520;text-decoration: none;" href="tel:8190849408">Sabarish Reddy Remala</a></b></h5>
-      <p>Electrical Engineer. <a style="text-decoration:none; color: inherit;" href="https://vit.ac.in/">VIT,Vellore.</a> <i class="fa fa-copyright" style="font-size:15px"></i> 2020</p> 
-     <p style="color:white;text-align:center;">Made with &#10084;&#65039; to all <b>VITians</b>.</p>
-      <a class="navbar-brand" href="mailto:sabarirjsr@gmail.com"><h4><strong><i class="fas fa-envelope-open-text zoom"></i></strong></h4></a><a>sabarirjsr@gmail.com</a>
-      <div>
-    <a style="color: red;" class="navbar-brand" href="https://www.youtube.com/channel/UCjvTrInXpvuMbBg4aEbkeQQ?view_as=subscriber"><h4><strong><i class="fab fa-youtube zoom"></i></strong></h4></a>
-
-    <a class="navbar-brand" href="https://linkedin.com/in/sabarishreddyrj"><h4><strong><i class="fab fa-linkedin zoom"></i></strong></h4></a>
-
-     <a style="color:#00BFFF;" class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006556459387"><h4><strong><i class="fab fa-facebook-square zoom"></i></strong></h4></a>
-
-     <a style="color:#FF4500;" class="navbar-brand" href="https://www.instagram.com/sabarish_reddi.rj/"><h4><strong><i class="fab fa-instagram zoom"></i></strong></h4></a>
-     </div>
-
-
-       
-   
-</div>
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-<script>
-
-//All input limits
-document.getElementById("noc").onkeyup=function(){
-        var input=parseInt(this.value);
-        if(Number.isNaN(input)){
-              document.getElementById("noc").value="";
-        }
-        
-        if(input<1 || input>200)
-        {
-        alert("Value should be between 1 - 200");
-        document.getElementById("noc").value="";
+      if (input < 0 || input > 50) {
+        alert("Value should be between 0 - 50");
+        document.getElementById("pcat2").value = "";
       }
 
       return;
@@ -1327,17 +1571,15 @@ document.getElementById("noc").onkeyup=function(){
 
 
 
+    document.getElementById("pdq1").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pdq1").value = "";
+      }
 
-    document.getElementById("one").onkeyup=function(){
-        var input=parseInt(this.value);
-        if(Number.isNaN(input)){
-              document.getElementById("one").value="";
-        }
-        
-        if(input<0 || input>150)
-        {
-        alert("Value should be between 0 - 150");
-        document.getElementById("one").value="";
+      if (input < 0 || input > 10) {
+        alert("Value should be between 0 - 10");
+        document.getElementById("pdq1").value = "";
       }
 
       return;
@@ -1346,19 +1588,15 @@ document.getElementById("noc").onkeyup=function(){
 
 
 
+    document.getElementById("pdq2").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pdq2").value = "";
+      }
 
-
-
-    document.getElementById("two").onkeyup=function(){
-        var input=parseInt(this.value);
-        if(Number.isNaN(input)){
-              document.getElementById("two").value="";
-        }
-        
-        if(input<0 || input>150)
-        {
-        alert("Value should be between 0 - 150");
-        document.getElementById("two").value="";
+      if (input < 0 || input > 10) {
+        alert("Value should be between 0 - 10");
+        document.getElementById("pdq2").value = "";
       }
 
       return;
@@ -1366,19 +1604,112 @@ document.getElementById("noc").onkeyup=function(){
     }
 
 
+    document.getElementById("pdq3").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pdq3").value = "";
+      }
+
+      if (input < 0 || input > 10) {
+        alert("Value should be between 0 - 10");
+        document.getElementById("pdq3").value = "";
+      }
+
+      return;
+
+    }
 
 
+    document.getElementById("ptf").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("ptf").value = "";
+      }
 
-    document.getElementById("cone").onkeyup=function(){
-        var input=parseInt(this.value);
-        if(Number.isNaN(input)){
-              document.getElementById("cone").value="";
-        }
-        
-        if(input<0 || input>100)
-        {
+      if (input < 0 || input > 100) {
         alert("Value should be between 0 - 100");
-        document.getElementById("cone").value="";
+        document.getElementById("ptf").value = "";
+      }
+
+      return;
+
+    }
+
+
+    document.getElementById("pli").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pli").value = "";
+      }
+
+      if (input < 0 || input > 60) {
+        alert("Value should be between 0 - 60");
+        document.getElementById("pli").value = "";
+      }
+
+      return;
+
+    }
+
+
+    document.getElementById("plf").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("plf").value = "";
+      }
+
+      if (input < 0 || input > 50) {
+        alert("Value should be between 0 - 50");
+        document.getElementById("plf").value = "";
+      }
+
+      return;
+
+    }
+
+
+    document.getElementById("pj1").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pj1").value = "";
+      }
+
+      if (input < 0 || input > 20) {
+        alert("Value should be between 0 - 20");
+        document.getElementById("pj1").value = "";
+      }
+
+      return;
+
+    }
+
+
+
+    document.getElementById("pj2").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pj2").value = "";
+      }
+
+      if (input < 0 || input > 30) {
+        alert("Value should be between 0 - 30");
+        document.getElementById("pj2").value = "";
+      }
+
+      return;
+
+    }
+
+
+    document.getElementById("pj3").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("pj3").value = "";
+      }
+
+      if (input < 0 || input > 50) {
+        alert("Value should be between 0 - 50");
+        document.getElementById("pj3").value = "";
       }
 
       return;
@@ -1389,182 +1720,384 @@ document.getElementById("noc").onkeyup=function(){
 
 
 
+    document.getElementById("adl").onkeyup = function () {
+      var input = parseFloat(this.value);
+      if (Number.isNaN(input)) {
+        document.getElementById("adl").value = "";
+      }
 
-    document.getElementById("ctwo").onkeyup=function(){
-        var input=parseInt(this.value);
-        if(Number.isNaN(input)){
-              document.getElementById("ctwo").value="";
+      if (input < 0 || input > 10) {
+        alert("Value should be between 0 - 10");
+        document.getElementById("adl").value = "";
+      }
+
+      return;
+
+    }
+
+
+
+
+
+    function gradepredform() {
+      document.getElementById('gradeform').reset();
+      document.getElementById("gradepredr").innerHTML = "Form is at it's default state.";
+      document.getElementById("gradepred1r").innerHTML = "You can proceed...";
+    }
+
+
+
+
+    function landtgradepred() {
+
+
+      var x = document.getElementById("withouttfat");
+      var y = document.getElementById("withoutlfat");
+      if (x.checked == true && y.checked == true) {
+        tlgradepred();
+      }
+      else if (x.checked == true) {
+        tgradepred();
+      }
+      else if (y.checked == true) {
+        lgradepred();
+      }
+      else {
+        gradepred();
+      }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function tgradepred() {
+
+      var cc = (document.getElementById("pcc").value);
+      var tc = (document.getElementById("ptc").value);
+      var lc = (document.getElementById("plc").value);
+      var jc = (document.getElementById("pjc").value);
+
+
+
+      var cat1 = parseFloat(document.getElementById("pcat1").value);
+      var cat2 = parseFloat(document.getElementById("pcat2").value);
+      var da1 = parseFloat(document.getElementById("pdq1").value);
+      var da2 = parseFloat(document.getElementById("pdq2").value);
+      var da3 = parseFloat(document.getElementById("pdq3").value);
+
+      var addlearn = parseFloat(document.getElementById("adl").value);
+
+
+
+      var labint = parseFloat(document.getElementById("pli").value);
+      var labfat = parseFloat(document.getElementById("plf").value);
+
+
+
+      var r1 = parseFloat(document.getElementById("pj1").value);
+      var r2 = parseFloat(document.getElementById("pj2").value);
+      var r3 = parseFloat(document.getElementById("pj3").value);
+
+      var tcmadd;
+      var lcmadd;
+      var jcmadd;
+
+
+      if (cc == "Course credits") {
+        document.getElementById("gradepred").innerHTML = "Please select Total credits for the course.";
+        document.getElementById("gradepred1").innerHTML = "";
+        document.getElementById("gradepred2").innerHTML = "";
+        document.getElementById("gradepred3").innerHTML = "";
+        document.getElementById("gradepred4").innerHTML = "";
+      }
+
+
+      else {
+
+
+
+
+
+        if (tc == "Theory credits") {
+          tc = 0;
         }
-        
-        if(input<0 || input>100)
-        {
-        alert("Value should be between 0 - 100");
-        document.getElementById("ctwo").value="";
+        else { }
+
+        if (lc == "Lab credits") {
+          lc = 0;
+        }
+        else { }
+
+        if (jc == "J-comp credits") {
+          jc = 0;
+
+        }
+        else { }
+
+        cc = parseInt(cc);
+        tc = parseInt(tc);
+        lc = parseInt(lc);
+        jc = parseInt(jc);
+
+        if ((tc + lc + jc) == 0) {
+          document.getElementById("gradepred").innerHTML = "Please select any one of the components(Theory, lab or J-comp) for the course you have choosen.";
+          document.getElementById("gradepred1").innerHTML = "";
+          document.getElementById("gradepred2").innerHTML = "";
+          document.getElementById("gradepred3").innerHTML = "";
+          document.getElementById("gradepred4").innerHTML = "";
+        }
+        else {
+
+          if ((tc + lc + jc) > 0 && ((tc + lc + jc) != cc)) {
+            document.getElementById("gradepred").innerHTML = "Your course credits are not matched with the selected components";
+            document.getElementById("gradepred1").innerHTML = "";
+            document.getElementById("gradepred2").innerHTML = "";
+            document.getElementById("gradepred3").innerHTML = "";
+            document.getElementById("gradepred4").innerHTML = "";
+          }
+          else {
+
+            if ((tc > 0) && (Number.isNaN(cat1) || Number.isNaN(cat2) || Number.isNaN(da1) || Number.isNaN(da2) || Number.isNaN(da3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Theory component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+            else if ((lc > 0) && (Number.isNaN(labint) || Number.isNaN(labfat))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Lab component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+
+            }
+
+
+
+
+            else if (jc > 0 && (Number.isNaN(r1) || Number.isNaN(r2) || Number.isNaN(r3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in J-component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+
+
+            else {
+
+              var cat1c = (cat1 / 50) * 15;
+              var cat2c = (cat2 / 50) * 15;
+              var da1c = da1;
+              var da2c = da2;
+              var da3c = da3;
+              var tfatc = ((cat1c + cat2c + da1c + da2c + da3c) * 40) / 60;
+              var tcm = tfatc + cat1c + cat2c + da1c + da2c + da3c;
+
+              if (tc > 0) {
+
+                addlearn = addlearn || 0;
+                if ((tcm + addlearn - tfatc) >= 60) {
+                  tcmadd = (((60 + tfatc) * (cc - lc - jc)) / cc);
+
+                }
+
+                else {
+                  tcmadd = (((tcm + addlearn) * (cc - lc - jc)) / cc);
+
+                }
+
+
+
+              }
+
+              else { }
+
+              var labintc = labint;
+              var labfatc = (labfat * 40) / 50;
+
+              if (lc > 0) {
+                if (labintc + labfatc < 50) {
+                  document.getElementById("gradepred2").innerHTML = "You got less than 50 marks in Lab Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+                else if (labintc + labfatc >= 50) {
+                  lcmadd = ((labintc + labfatc) * (cc - tc - jc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+
+              var r1c = r1;
+              var r2c = r2;
+              var r3c = r3;
+
+
+              if (jc > 0) {
+                if ((r1c + r2c + r3c) < 50) {
+                  document.getElementById("gradepred3").innerHTML = "You got less than 50 marks in J- Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+
+                }
+
+
+                else if ((r1c + r2c + r3c) >= 50) {
+                  jcmadd = ((r1c + r2c + r3c) * (cc - tc - lc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+              tcmadd = tcmadd || 0;
+              lcmadd = lcmadd || 0;
+              jcmadd = jcmadd || 0;
+
+
+
+
+              var totalmarks = tcmadd + lcmadd + jcmadd;
+
+
+
+              if (totalmarks < 50) {
+
+                document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course because your Final marks are lessthan 50% of total.";
+                document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                document.getElementById("gradepred").innerHTML = "";
+                document.getElementById("gradepred2").innerHTML = "";
+                document.getElementById("gradepred3").innerHTML = "";
+              }
+
+              else {
+                if (totalmarks >= 90) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is S.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 80) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is A.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 70) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is B.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+
+                }
+
+                else if (totalmarks >= 60) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is C.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 55) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is D.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 50) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is E.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Theory Fat marks weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+              }
+
+
+
+            }
+
+
+          }
+
+
+
+        }
+
+
+
+
       }
 
-      return;
+
+
+
 
     }
 
 
 
 
-	//<!----Attendance Calculator--->
-
-
-
-
-
-
-function cpclassesadd(){
-if(document.getElementById("cone").value==""){
-    document.getElementById("cone").value=1;
-    cdivideBy();
-  }
-else{
-document.getElementById("cone").value=parseInt(document.getElementById("cone").value)+1;
-cdivideBy();
-}
-}
-
-
-function cpclassessub(){
-  if(document.getElementById("cone").value==1){
-    document.getElementById("cone").value=0;
-    cdivideBy();
-  }
-  else if(document.getElementById("cone").value==0){
-    document.getElementById("cone").value=0;
-    cdivideBy();
-}
-  else{
-document.getElementById("cone").value=parseInt(document.getElementById("cone").value)-1;
-cdivideBy();
-}
-}
-
-
-
-
-function caclassesadd(){
-if(document.getElementById("ctwo").value==""){
-    document.getElementById("ctwo").value=1;
-    cdivideBy();
-  }
-else{
-document.getElementById("ctwo").value=parseInt(document.getElementById("ctwo").value)+1;
-cdivideBy();
-}
-}
-
-
-function caclassessub(){
-  if(document.getElementById("ctwo").value<=1){
-    document.getElementById("ctwo").value=0;
-    cdivideBy();
-  }
-  else{
-document.getElementById("ctwo").value=parseInt(document.getElementById("ctwo").value)-1;
-cdivideBy();
-}
-}
-
-
-
-
-function cdivideBy() 
-{ 
-      
-       var num2 = parseInt(document.getElementById('cone').value);
-       var num3 = parseInt(document.getElementById("ctwo").value); 
-
-if(num2<0 || num3<0)
-{
-
-document.getElementById("cresult2").innerHTML = "Please check your entries,shouldn't be negative.";
-document.getElementById("cbar").style.width = "0%";
-}
-
-else if(num3==0 && num2==0)
-{
-
-document.getElementById("cresult2").innerHTML = "Your attendance is 0%" ;
-document.getElementById("cbar").style.width = 0+"%";
-
-}
-
-else if(num3>0){
-  var num4=(((num2+num3)-num3)/(num2+num3))*100;
-  num4 = num4 || 0;
- 
-  if(num4>100){
-    document.getElementById("cresult2").innerHTML = "Please check your entries.";
-   
-document.getElementById("cbar").style.width = "0%";
-  }
-  else if(num4>=75){
-    document.getElementById("cbar").classList.remove("bg-danger");
-    document.getElementById("cbar").classList.remove("bg-warning");
-    document.getElementById("cbar").classList.add("bg-success");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4>=50){
-    document.getElementById("cbar").classList.remove("bg-danger");
-    document.getElementById("cbar").classList.remove("bg-success");
-    document.getElementById("cbar").classList.add("bg-warning");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4<0){
-document.getElementById("cresult2").innerHTML = "Please check your entries.";
-document.getElementById("cbar").style.width = "0%";
-}
-  else{
-     document.getElementById("cbar").classList.remove("bg-success");
-    document.getElementById("cbar").classList.remove("bg-warning");
-  document.getElementById("cbar").classList.add("bg-danger");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-  }
-}
-
-else {
-  var num4=(num2/num2)*100;
-  num4 = num4 || 0;
-  if(num4>100){
-    document.getElementById("cresult2").innerHTML = "Please check your entries.";
-document.getElementById("cbar").style.width = "0%";
-  }
-  else if(num4>=75){
-    document.getElementById("cbar").classList.remove("bg-danger");
-    document.getElementById("cbar").classList.remove("bg-warning");
-    document.getElementById("cbar").classList.add("bg-success");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4>=50){
-    document.getElementById("cbar").classList.remove("bg-danger");
-    document.getElementById("cbar").classList.remove("bg-success");
-    document.getElementById("cbar").classList.add("bg-warning");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-  else{
-     document.getElementById("cbar").classList.remove("bg-success");
-    document.getElementById("cbar").classList.remove("bg-warning");
-     document.getElementById("cbar").classList.add("bg-danger");
-document.getElementById("cbar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("cbar").style.width = num4.toFixed(2)+"%";
-document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-  }
-}
-}
 
 
 
@@ -1598,217 +2131,709 @@ document.getElementById("cresult2").innerHTML = "Your attendance is "+num4.toFix
 
 
 
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var oneaddon=document.getElementById('paddons');
-var oneaddon1=document.getElementById('paddons1');
-var twoaddon=document.getElementById('aaddons');
-var twoaddon1=document.getElementById('aaddons1');
 
-//checks instantly 
-var checker = setInterval(function() {
-    if(two.value !== '') {
-      one.disabled = true;
-      oneaddon.disabled=true;
-      oneaddon1.disabled=true;
-    } else {
-      //when its clear, it enabled again
-      one.disabled = false;
-       oneaddon.disabled=false;
-        oneaddon1.disabled=false;
+
+
+
+
+    function lgradepred() {
+
+
+      var cc = (document.getElementById("pcc").value);
+      var tc = (document.getElementById("ptc").value);
+      var lc = (document.getElementById("plc").value);
+      var jc = (document.getElementById("pjc").value);
+
+
+
+      var cat1 = parseFloat(document.getElementById("pcat1").value);
+      var cat2 = parseFloat(document.getElementById("pcat2").value);
+      var da1 = parseFloat(document.getElementById("pdq1").value);
+      var da2 = parseFloat(document.getElementById("pdq2").value);
+      var da3 = parseFloat(document.getElementById("pdq3").value);
+      var tfat = parseFloat(document.getElementById("ptf").value);
+      var addlearn = parseFloat(document.getElementById("adl").value);
+
+
+
+      var labint = parseFloat(document.getElementById("pli").value);
+
+
+
+
+      var r1 = parseFloat(document.getElementById("pj1").value);
+      var r2 = parseFloat(document.getElementById("pj2").value);
+      var r3 = parseFloat(document.getElementById("pj3").value);
+
+      var tcmadd;
+      var lcmadd;
+      var jcmadd;
+
+
+      if (cc == "Course credits") {
+        document.getElementById("gradepred").innerHTML = "Please select Total credits for the course.";
+        document.getElementById("gradepred1").innerHTML = "";
+        document.getElementById("gradepred2").innerHTML = "";
+        document.getElementById("gradepred3").innerHTML = "";
+        document.getElementById("gradepred4").innerHTML = "";
+      }
+
+
+      else {
+
+
+
+
+
+        if (tc == "Theory credits") {
+          tc = 0;
+        }
+        else { }
+
+        if (lc == "Lab credits") {
+          lc = 0;
+        }
+        else { }
+
+        if (jc == "J-comp credits") {
+          jc = 0;
+
+        }
+        else { }
+
+        cc = parseInt(cc);
+        tc = parseInt(tc);
+        lc = parseInt(lc);
+        jc = parseInt(jc);
+
+        if ((tc + lc + jc) == 0) {
+          document.getElementById("gradepred").innerHTML = "Please select any one of the components(Theory, lab or J-comp) for the course you have choosen.";
+          document.getElementById("gradepred1").innerHTML = "";
+          document.getElementById("gradepred2").innerHTML = "";
+          document.getElementById("gradepred3").innerHTML = "";
+          document.getElementById("gradepred4").innerHTML = "";
+        }
+        else {
+
+          if ((tc + lc + jc) > 0 && ((tc + lc + jc) != cc)) {
+            document.getElementById("gradepred").innerHTML = "Your course credits are not matched with the selected components";
+            document.getElementById("gradepred1").innerHTML = "";
+            document.getElementById("gradepred2").innerHTML = "";
+            document.getElementById("gradepred3").innerHTML = "";
+            document.getElementById("gradepred4").innerHTML = "";
+          }
+          else {
+
+            if ((tc > 0) && (Number.isNaN(cat1) || Number.isNaN(cat2) || Number.isNaN(da1) || Number.isNaN(da2) || Number.isNaN(da3) || Number.isNaN(tfat))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Theory component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+            else if ((lc > 0) && (Number.isNaN(labint))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Lab component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+
+            }
+
+
+
+
+            else if (jc > 0 && (Number.isNaN(r1) || Number.isNaN(r2) || Number.isNaN(r3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in J-component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+
+
+            else {
+
+              var cat1c = (cat1 / 50) * 15;
+              var cat2c = (cat2 / 50) * 15;
+              var da1c = da1;
+              var da2c = da2;
+              var da3c = da3;
+              var tfatc = (tfat * 40) / 100;
+              var tcm = tfatc + cat1c + cat2c + da1c + da2c + da3c;
+
+              if (tc > 0) {
+                if (tfat < 40) {
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+                  document.getElementById("gradepred1").innerHTML = "";
+                  document.getElementById("gradepred").innerHTML = "You got lessthan 40 marks in Theory FAT.";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+
+                else {
+                  addlearn = addlearn || 0;
+                  if ((tcm + addlearn - tfatc) >= 60) {
+                    tcmadd = (((60 + tfatc) * (cc - lc - jc)) / cc);
+
+                  }
+
+                  else {
+                    tcmadd = (((tcm + addlearn) * (cc - lc - jc)) / cc);
+
+                  }
+
+                }
+
+              }
+
+              else { }
+
+              var labintc = labint;
+              var labfatc = (labintc * 40) / 60;
+
+              if (lc > 0) {
+                if (labintc + labfatc < 50) {
+                  document.getElementById("gradepred2").innerHTML = "You got less than 50 marks in Lab Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+                else if (labintc + labfatc >= 50) {
+                  lcmadd = ((labintc + labfatc) * (cc - tc - jc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+
+              var r1c = r1;
+              var r2c = r2;
+              var r3c = r3;
+
+
+              if (jc > 0) {
+                if ((r1c + r2c + r3c) < 50) {
+                  document.getElementById("gradepred3").innerHTML = "You got less than 50 marks in J- Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+
+                }
+
+
+                else if ((r1c + r2c + r3c) >= 50) {
+                  jcmadd = ((r1c + r2c + r3c) * (cc - tc - lc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+              tcmadd = tcmadd || 0;
+              lcmadd = lcmadd || 0;
+              jcmadd = jcmadd || 0;
+
+
+
+
+              var totalmarks = tcmadd + lcmadd + jcmadd;
+
+
+              if (tfat >= 40 && totalmarks < 50) {
+                if (totalmarks < 50) {
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course because your Final marks are lessthan 50% of total.";
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+              }
+              else {
+                if (totalmarks >= 90) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is S.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 80) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is A.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 70) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is B.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+
+                }
+
+                else if (totalmarks >= 60) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is C.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 55) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is D.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 50) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is E.";
+                  document.getElementById("gradepred").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40);
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+              }
+
+
+
+            }
+
+
+          }
+
+
+
+        }
+
+
+
+
+      }
+
+
+
+
     }
-    if(one.value !== '') {
-      two.disabled = true;
-       twoaddon.disabled=true;
-       twoaddon1.disabled=true;
-    } else {
-      two.disabled = false;
-       twoaddon.disabled=false;
-       twoaddon1.disabled=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function tlgradepred() {
+
+
+
+      var cc = (document.getElementById("pcc").value);
+      var tc = (document.getElementById("ptc").value);
+      var lc = (document.getElementById("plc").value);
+      var jc = (document.getElementById("pjc").value);
+
+
+
+      var cat1 = parseFloat(document.getElementById("pcat1").value);
+      var cat2 = parseFloat(document.getElementById("pcat2").value);
+      var da1 = parseFloat(document.getElementById("pdq1").value);
+      var da2 = parseFloat(document.getElementById("pdq2").value);
+      var da3 = parseFloat(document.getElementById("pdq3").value);
+
+      var addlearn = parseFloat(document.getElementById("adl").value);
+
+
+
+      var labint = parseFloat(document.getElementById("pli").value);
+
+
+
+
+      var r1 = parseFloat(document.getElementById("pj1").value);
+      var r2 = parseFloat(document.getElementById("pj2").value);
+      var r3 = parseFloat(document.getElementById("pj3").value);
+
+      var tcmadd;
+      var lcmadd;
+      var jcmadd;
+
+
+      if (cc == "Course credits") {
+        document.getElementById("gradepred").innerHTML = "Please select Total credits for the course.";
+        document.getElementById("gradepred1").innerHTML = "";
+        document.getElementById("gradepred2").innerHTML = "";
+        document.getElementById("gradepred3").innerHTML = "";
+        document.getElementById("gradepred4").innerHTML = "";
+      }
+
+
+      else {
+
+
+
+
+
+        if (tc == "Theory credits") {
+          tc = 0;
+        }
+        else { }
+
+        if (lc == "Lab credits") {
+          lc = 0;
+        }
+        else { }
+
+        if (jc == "J-comp credits") {
+          jc = 0;
+
+        }
+        else { }
+
+        cc = parseInt(cc);
+        tc = parseInt(tc);
+        lc = parseInt(lc);
+        jc = parseInt(jc);
+
+        if ((tc + lc + jc) == 0) {
+          document.getElementById("gradepred").innerHTML = "Please select any one of the components (Theory, lab or J-comp) for the course you have choosen.";
+          document.getElementById("gradepred1").innerHTML = "";
+          document.getElementById("gradepred2").innerHTML = "";
+          document.getElementById("gradepred3").innerHTML = "";
+          document.getElementById("gradepred4").innerHTML = "";
+        }
+        else {
+
+          if ((tc + lc + jc) > 0 && ((tc + lc + jc) != cc)) {
+            document.getElementById("gradepred").innerHTML = "Your course credits are not matched with the selected components";
+            document.getElementById("gradepred1").innerHTML = "";
+            document.getElementById("gradepred2").innerHTML = "";
+            document.getElementById("gradepred3").innerHTML = "";
+            document.getElementById("gradepred4").innerHTML = "";
+          }
+          else {
+
+            if ((tc > 0) && (Number.isNaN(cat1) || Number.isNaN(cat2) || Number.isNaN(da1) || Number.isNaN(da2) || Number.isNaN(da3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Theory component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+            else if ((lc > 0) && (Number.isNaN(labint))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Lab component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+
+            }
+
+
+
+
+            else if (jc > 0 && (Number.isNaN(r1) || Number.isNaN(r2) || Number.isNaN(r3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in J-component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+
+
+            else {
+
+              var cat1c = (cat1 / 50) * 15;
+              var cat2c = (cat2 / 50) * 15;
+              var da1c = da1;
+              var da2c = da2;
+              var da3c = da3;
+              var tfatc = ((cat1c + cat2c + da1c + da2c + da3c) * 40) / 60;
+              var tcm = tfatc + cat1c + cat2c + da1c + da2c + da3c;
+
+
+              if (tc > 0) {
+
+                addlearn = addlearn || 0;
+                if ((tcm + addlearn - tfatc) >= 60) {
+                  tcmadd = (((60 + tfatc) * (cc - lc - jc)) / cc);
+
+                }
+
+                else {
+                  tcmadd = (((tcm + addlearn) * (cc - lc - jc)) / cc);
+
+                }
+
+
+
+              }
+
+              else { }
+
+              var labintc = labint;
+              var labfatc = (labintc * 40) / 60;
+
+              if (lc > 0) {
+                if (labintc + labfatc < 50) {
+                  document.getElementById("gradepred2").innerHTML = "You got lessthan 50 marks in Lab Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+                else if (labintc + labfatc >= 50) {
+                  lcmadd = ((labintc + labfatc) * (cc - tc - jc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+
+              var r1c = r1;
+              var r2c = r2;
+              var r3c = r3;
+
+
+              if (jc > 0) {
+                if ((r1c + r2c + r3c) < 50) {
+                  document.getElementById("gradepred3").innerHTML = "You got less than 50 marks in J- Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+
+                }
+
+
+                else if ((r1c + r2c + r3c) >= 50) {
+                  jcmadd = ((r1c + r2c + r3c) * (cc - tc - lc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+              tcmadd = tcmadd || 0;
+              lcmadd = lcmadd || 0;
+              jcmadd = jcmadd || 0;
+
+
+
+
+              var totalmarks = tcmadd + lcmadd + jcmadd;
+
+
+
+              if (totalmarks < 50) {
+
+                document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course because your Final marks are lessthan 50% of total.";
+                document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                document.getElementById("gradepred").innerHTML = "";
+                document.getElementById("gradepred2").innerHTML = "";
+                document.getElementById("gradepred3").innerHTML = "";
+              }
+
+              else {
+                if (totalmarks >= 90) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is S.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 80) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is A.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 70) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is B.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+
+                }
+
+                else if (totalmarks >= 60) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is C.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 55) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is D.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 50) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is E.";
+
+                  document.getElementById("gradepred").innerHTML = "Your projected Theory Fat marks (out of 100) is " + ((tfatc * 100) / 40).toFixed(4) + " ~ " + Math.ceil((tfatc * 100) / 40) + " weightage (out of 40) is " + tfatc.toFixed(4) + " ~ " + Math.ceil(tfatc);
+
+
+                  document.getElementById("gradepred2").innerHTML = "Your projected Lab Fat marks (out of 50) is " + ((labfatc * 50) / 40).toFixed(4) + " ~ " + Math.ceil((labfatc * 50) / 40) + " weightage (out of 40) is " + labfatc.toFixed(4) + " ~ " + Math.ceil(labfatc);
+
+
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+              }
+
+
+
+            }
+
+
+          }
+
+
+
+        }
+
+
+
+
+      }
+
+
+
+
+
 
     }
-}, 30);
-
-
-
-
-
-function tclassesadd(){
-if(document.getElementById("noc").value==""){
-    document.getElementById("noc").value=1;
-    divideBy();
-  }
-  else{
-document.getElementById("noc").value=parseInt(document.getElementById("noc").value)+1;
-divideBy();
-}
-}
-
-
-function tclassessub(){
-	if(document.getElementById("noc").value==0){
-    document.getElementById("noc").value=1;
-    divideBy();
-  }
-  else if(document.getElementById("noc").value==1){
-    document.getElementById("noc").value=1;
-    divideBy();
-  }
-  else{
-document.getElementById("noc").value=parseInt(document.getElementById("noc").value)-1;
-divideBy();
-}
-}
-
-
-
-
-
-function pclassesadd(){
-if(document.getElementById("one").value==""){
-    document.getElementById("one").value=1;
-    divideBy();
-  }
-else{
-document.getElementById("one").value=parseInt(document.getElementById("one").value)+1;
-divideBy();
-}
-}
-
-
-function pclassessub(){
-  if(document.getElementById("one").value==1){
-    document.getElementById("one").value="";
-    divideBy();
-  }
-  else{
-document.getElementById("one").value=parseInt(document.getElementById("one").value)-1;
-divideBy();
-}
-}
-
-
-
-
-function aclassesadd(){
-if(document.getElementById("two").value==""){
-    document.getElementById("two").value=1;
-    divideBy();
-  }
-else{
-document.getElementById("two").value=parseInt(document.getElementById("two").value)+1;
-divideBy();
-}
-}
-
-
-function aclassessub(){
-  if(document.getElementById("two").value==1){
-    document.getElementById("two").value="";
-    divideBy();
-  }
-  else{
-document.getElementById("two").value=parseInt(document.getElementById("two").value)-1;
-divideBy();
-}
-}
-
-
-
-
-function divideBy() 
-{ 
-       var num1 = (document.getElementById("noc").value);
-       var num2 = (document.getElementById('one').value);
-       var num3 = (document.getElementById("two").value); 
-
-if(num1<1 || num2<0 || num3<0)
-{
-
-document.getElementById("result2").innerHTML = "Please check your entries,shouldn't be negative;non zero total classes or empty.";
-document.getElementById("bar").style.width = "0%";
-}
-
-else if(num3==0&&num2==0&&num1>=1)
-{
-
-document.getElementById("result2").innerHTML = "Your attendance is 0%" ;
-document.getElementById("bar").style.width = 0+"%";
-
-}
-
-else if(num3>0){
-  var num5=num1-num3;
-  var num4=(num5/num1)*100;
-  num4 = num4 || 0;
-  if(num4>100){
-    document.getElementById("result2").innerHTML = "Please check your entries.";
-   
-document.getElementById("bar").style.width = "0%";
-  }
-  else if(num4>=75){
-    document.getElementById("bar").classList.remove("bg-danger");
-    document.getElementById("bar").classList.remove("bg-warning");
-    document.getElementById("bar").classList.add("bg-success");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4>=50){
-    document.getElementById("bar").classList.remove("bg-danger");
-    document.getElementById("bar").classList.remove("bg-success");
-    document.getElementById("bar").classList.add("bg-warning");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4<0){
-document.getElementById("result2").innerHTML = "Please check your entries.";
-document.getElementById("bar").style.width = "0%";
-}
-  else{
-     document.getElementById("bar").classList.remove("bg-success");
-    document.getElementById("bar").classList.remove("bg-warning");
-  document.getElementById("bar").classList.add("bg-danger");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-  }
-}
-
-else {
-  var num4=(num2/num1)*100;
-  num4 = num4 || 0;
-  if(num4>100){
-    document.getElementById("result2").innerHTML = "Please check your entries." ;
-document.getElementById("bar").style.width = "0%";
-  }
-  else if(num4>=75){
-    document.getElementById("bar").classList.remove("bg-danger");
-    document.getElementById("bar").classList.remove("bg-warning");
-    document.getElementById("bar").classList.add("bg-success");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-else if(num4>=50){
-    document.getElementById("bar").classList.remove("bg-danger");
-    document.getElementById("bar").classList.remove("bg-success");
-    document.getElementById("bar").classList.add("bg-warning");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-}
-  else{
-     document.getElementById("bar").classList.remove("bg-success");
-    document.getElementById("bar").classList.remove("bg-warning");
-     document.getElementById("bar").classList.add("bg-danger");
-document.getElementById("bar").innerHTML = num4.toFixed(2)+"%" ;
-document.getElementById("bar").style.width = num4.toFixed(2)+"%";
-document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixed(2)+"%" ;
-  }
-}
-}
 
 
 
@@ -1826,6 +2851,379 @@ document.getElementById("result2").innerHTML = "Your attendance is "+num4.toFixe
 
 
 
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function gradepred() {
+
+
+      var cc = (document.getElementById("pcc").value);
+      var tc = (document.getElementById("ptc").value);
+      var lc = (document.getElementById("plc").value);
+      var jc = (document.getElementById("pjc").value);
+
+
+
+      var cat1 = parseFloat(document.getElementById("pcat1").value);
+      var cat2 = parseFloat(document.getElementById("pcat2").value);
+      var da1 = parseFloat(document.getElementById("pdq1").value);
+      var da2 = parseFloat(document.getElementById("pdq2").value);
+      var da3 = parseFloat(document.getElementById("pdq3").value);
+      var tfat = parseFloat(document.getElementById("ptf").value);
+      var addlearn = parseFloat(document.getElementById("adl").value);
+
+
+
+      var labint = parseFloat(document.getElementById("pli").value);
+      var labfat = parseFloat(document.getElementById("plf").value);
+
+
+
+      var r1 = parseFloat(document.getElementById("pj1").value);
+      var r2 = parseFloat(document.getElementById("pj2").value);
+      var r3 = parseFloat(document.getElementById("pj3").value);
+
+      var tcmadd;
+      var lcmadd;
+      var jcmadd;
+
+
+      if (cc == "Course credits") {
+        document.getElementById("gradepred").innerHTML = "Please select Total credits for the course.";
+        document.getElementById("gradepred1").innerHTML = "";
+        document.getElementById("gradepred2").innerHTML = "";
+        document.getElementById("gradepred3").innerHTML = "";
+        document.getElementById("gradepred4").innerHTML = "";
+      }
+
+
+      else {
+
+
+
+
+
+        if (tc == "Theory credits") {
+          tc = 0;
+        }
+        else { }
+
+        if (lc == "Lab credits") {
+          lc = 0;
+        }
+        else { }
+
+        if (jc == "J-comp credits") {
+          jc = 0;
+
+        }
+        else { }
+
+        cc = parseInt(cc);
+        tc = parseInt(tc);
+        lc = parseInt(lc);
+        jc = parseInt(jc);
+
+        if ((tc + lc + jc) == 0) {
+          document.getElementById("gradepred").innerHTML = "Please select any one of the components(Theory, lab or J-comp) for the course you have choosen.";
+          document.getElementById("gradepred1").innerHTML = "";
+          document.getElementById("gradepred2").innerHTML = "";
+          document.getElementById("gradepred3").innerHTML = "";
+          document.getElementById("gradepred4").innerHTML = "";
+        }
+        else {
+
+          if ((tc + lc + jc) > 0 && ((tc + lc + jc) != cc)) {
+            document.getElementById("gradepred").innerHTML = "Your course credits are not matched with the selected components";
+            document.getElementById("gradepred1").innerHTML = "";
+            document.getElementById("gradepred2").innerHTML = "";
+            document.getElementById("gradepred3").innerHTML = "";
+            document.getElementById("gradepred4").innerHTML = "";
+          }
+          else {
+
+            if ((tc > 0) && (Number.isNaN(cat1) || Number.isNaN(cat2) || Number.isNaN(da1) || Number.isNaN(da2) || Number.isNaN(da3) || Number.isNaN(tfat))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Theory component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+            else if ((lc > 0) && (Number.isNaN(labint) || Number.isNaN(labfat))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in Lab component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+
+            }
+
+
+
+
+            else if (jc > 0 && (Number.isNaN(r1) || Number.isNaN(r2) || Number.isNaN(r3))) {
+
+              document.getElementById("gradepred").innerHTML = "All entries are not filled in J-component.";
+              document.getElementById("gradepred1").innerHTML = "";
+              document.getElementById("gradepred2").innerHTML = "";
+              document.getElementById("gradepred3").innerHTML = "";
+              document.getElementById("gradepred4").innerHTML = "";
+            }
+
+
+
+
+            else {
+
+              var cat1c = (cat1 / 50) * 15;
+              var cat2c = (cat2 / 50) * 15;
+              var da1c = da1;
+              var da2c = da2;
+              var da3c = da3;
+              var tfatc = (tfat * 40) / 100;
+              var tcm = tfatc + cat1c + cat2c + da1c + da2c + da3c;
+
+              if (tc > 0) {
+                if (tfat < 40) {
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+                  document.getElementById("gradepred1").innerHTML = "";
+                  document.getElementById("gradepred").innerHTML = "You got lessthan 40 marks in Theory FAT.";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+
+                else {
+                  addlearn = addlearn || 0;
+                  if ((tcm + addlearn - tfatc) >= 60) {
+                    tcmadd = (((60 + tfatc) * (cc - lc - jc)) / cc);
+
+                  }
+
+                  else {
+                    tcmadd = (((tcm + addlearn) * (cc - lc - jc)) / cc);
+
+                  }
+
+                }
+
+              }
+
+              else { }
+
+              var labintc = labint;
+              var labfatc = (labfat * 40) / 50;
+
+              if (lc > 0) {
+                if (labintc + labfatc < 50) {
+                  document.getElementById("gradepred2").innerHTML = "You got lessthan 50 marks in Lab Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+
+
+                else if (labintc + labfatc >= 50) {
+                  lcmadd = ((labintc + labfatc) * (cc - tc - jc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+
+              var r1c = r1;
+              var r2c = r2;
+              var r3c = r3;
+
+
+              if (jc > 0) {
+                if ((r1c + r2c + r3c) < 50) {
+                  document.getElementById("gradepred3").innerHTML = "You got lessthan 50 marks in J- Component.";
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course.";
+
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+
+                }
+
+
+                else if ((r1c + r2c + r3c) >= 50) {
+                  jcmadd = ((r1c + r2c + r3c) * (cc - tc - lc)) / cc;
+
+                }
+
+              }
+
+
+              else { }
+
+              tcmadd = tcmadd || 0;
+              lcmadd = lcmadd || 0;
+              jcmadd = jcmadd || 0;
+
+
+
+
+              var totalmarks = tcmadd + lcmadd + jcmadd;
+
+
+              if (tfat >= 40 && totalmarks < 50) {
+                if (totalmarks < 50) {
+
+                  document.getElementById("gradepred4").innerHTML = "Oops!You got failed in this course because your Final marks are lessthan 50% of total.";
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is F.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+                }
+              }
+              else {
+                if (totalmarks >= 90) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is S.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 80) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is A.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+                }
+
+                else if (totalmarks >= 70) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is B.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+
+                }
+
+                else if (totalmarks >= 60) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is C.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 55) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is D.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+                else if (totalmarks >= 50) {
+                  document.getElementById("gradepred4").innerHTML = "Your Final marks for this course is " + totalmarks.toFixed(4) + " ~ " + Math.ceil(totalmarks);
+                  document.getElementById("gradepred1").innerHTML = "If this course is graded under Absolute grading, your grade is E.";
+                  document.getElementById("gradepred").innerHTML = "";
+                  document.getElementById("gradepred2").innerHTML = "";
+                  document.getElementById("gradepred3").innerHTML = "";
+
+
+                }
+
+
+              }
+
+
+
+            }
+
+
+          }
+
+
+
+        }
+
+
+
+
+      }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>			
 </body>
 </html>
