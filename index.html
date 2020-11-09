@@ -936,7 +936,8 @@ function loadfunc(){
               style="text-align: center;background-color:#FF6347;color: #000000;"><i
                 class="fas fa-exclamation-circle"></i> Compute
               excluding <b>FAT</b>
-              <input style="width: 16px;height:16px;" type="checkbox" id="withouttfat" onclick="tfatcheck()" /></span>
+              <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withouttfat"
+                onclick="tfatcheck()" /></span>
           </h4>
 
 
@@ -948,11 +949,13 @@ function loadfunc(){
                 if (document.getElementById("ptf").value > -1) {
                   document.getElementById("ptf").value = "";
                 }
+                document.getElementById("ptf").style.backgroundColor = "black";
                 document.getElementById("ptf").placeholder = "You can skip this..";
 
               }
               else {
                 document.getElementById("ptf").disabled = false;
+                document.getElementById("ptf").style.backgroundColor = "";
                 document.getElementById("ptf").placeholder = "max-100";
               }
             }
@@ -1011,7 +1014,8 @@ function loadfunc(){
               style="text-align: center;background-color:#FF6347;color: #000000;"><i
                 class="fas fa-exclamation-circle"></i> Compute
               excluding <b>LAB FAT</b>
-              <input style="width: 16px;height:16px;" type="checkbox" id="withoutlfat" onclick="lfatcheck()" /></span>
+              <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withoutlfat"
+                onclick="lfatcheck()" /></span>
           </h4>
 
 
@@ -1023,11 +1027,13 @@ function loadfunc(){
                 if (document.getElementById("plf").value > -1) {
                   document.getElementById("plf").value = "";
                 }
+                document.getElementById("plf").style.backgroundColor = "black";
                 document.getElementById("plf").placeholder = "You can skip this..";
 
               }
               else {
                 document.getElementById("plf").disabled = false;
+                document.getElementById("plf").style.backgroundColor = "black";
                 document.getElementById("plf").placeholder = "max-50";
               }
             }
