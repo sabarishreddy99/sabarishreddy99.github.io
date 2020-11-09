@@ -793,6 +793,7 @@ function loadfunc(){
 	
 	
 
+   
     <!---GradePredictor--->
     <div class="container containers">
       <br>
@@ -899,6 +900,48 @@ function loadfunc(){
 
         <div id="gradepredtheoryswitch" class="collapse">
 
+          <br>
+
+          <h4 style="text-align: center;"><span class="badge"
+              style="text-align: center;background-color:#FF6347;color: #000000;"><i
+                class="fas fa-exclamation-circle"></i> Compute
+              excluding <b>FAT</b>
+              <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withouttfat"
+                onclick="tfatcheck()" /></span>
+          </h4>
+
+
+          <script>
+            function tfatcheck() {
+              var x = document.getElementById("withouttfat");
+              if (x.checked == true) {
+                document.getElementById("ptf").disabled = true;
+                if (document.getElementById("ptf").value > -1) {
+                  document.getElementById("ptf").value = "";
+                }
+                document.getElementById("ptf").style.backgroundColor = "black";
+                document.getElementById("ptf").placeholder = "You can skip this..";
+                document.getElementById("pcat1").placeholder = "max-30";
+                document.getElementById("pcat2").placeholder = "max-30";
+                document.getElementById("pcat1").value = "";
+                document.getElementById("pcat2").value = "";
+
+
+              }
+              else {
+                document.getElementById("ptf").disabled = false;
+                document.getElementById("ptf").style.backgroundColor = "";
+                document.getElementById("ptf").placeholder = "max-100";
+                document.getElementById("pcat1").placeholder = "max-50";
+                document.getElementById("pcat2").placeholder = "max-50";
+              }
+            }
+
+
+          </script>
+
+          <br>
+          <br>
 
           <div class="form-row">
             <div class="col">
@@ -930,39 +973,6 @@ function loadfunc(){
             </div>
 
           </div>
-          <br>
-
-          <h4 style="text-align: center;"><span class="badge"
-              style="text-align: center;background-color:#FF6347;color: #000000;"><i
-                class="fas fa-exclamation-circle"></i> Compute
-              excluding <b>FAT</b>
-              <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withouttfat"
-                onclick="tfatcheck()" /></span>
-          </h4>
-
-
-          <script>
-            function tfatcheck() {
-              var x = document.getElementById("withouttfat");
-              if (x.checked == true) {
-                document.getElementById("ptf").disabled = true;
-                if (document.getElementById("ptf").value > -1) {
-                  document.getElementById("ptf").value = "";
-                }
-                document.getElementById("ptf").style.backgroundColor = "black";
-                document.getElementById("ptf").placeholder = "You can skip this..";
-
-              }
-              else {
-                document.getElementById("ptf").disabled = false;
-                document.getElementById("ptf").style.backgroundColor = "";
-                document.getElementById("ptf").placeholder = "max-100";
-              }
-            }
-
-
-          </script>
-
 
 
           <br>
@@ -995,6 +1005,7 @@ function loadfunc(){
               data-toggle="collapse" name="example">
             <span class="slider"></span>
           </label>
+
           <h2 style="text-align: center;font-family: 'Audiowide';"><small>Lab Component</small></h2>
           <br>
           <br>
@@ -1005,45 +1016,54 @@ function loadfunc(){
         <div id="gradepredlabswitch" class="collapse">
 
           <div class="form-group">
+
+            <br>
+
+
+            <h4 style="text-align: center;"><span class="badge"
+                style="text-align: center;background-color:#FF6347;color: #000000;"><i
+                  class="fas fa-exclamation-circle"></i> Compute
+                excluding <b>LAB FAT</b>
+                <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withoutlfat"
+                  onclick="lfatcheck()" /></span>
+            </h4>
+
+
+            <script>
+              function lfatcheck() {
+                var x = document.getElementById("withoutlfat");
+                if (x.checked == true) {
+                  document.getElementById("plf").disabled = true;
+                  if (document.getElementById("plf").value > -1) {
+                    document.getElementById("plf").value = "";
+                  }
+                  document.getElementById("plf").style.backgroundColor = "black";
+                  document.getElementById("plf").placeholder = "You can skip this..";
+
+                }
+                else {
+                  document.getElementById("plf").disabled = false;
+                  document.getElementById("plf").style.backgroundColor = "";
+                  document.getElementById("plf").placeholder = "max-50";
+                }
+              }
+
+
+            </script>
+
+
+
+            <br>
+            <br>
+
+
             <label><span class="badge badge-secondary">Lab Internals:</span></label>
             <input type="number" class="form-control" id="pli" min="0" step="1" max="60" placeholder="max-60">
           </div>
           <br>
 
-          <h4 style="text-align: center;"><span class="badge"
-              style="text-align: center;background-color:#FF6347;color: #000000;"><i
-                class="fas fa-exclamation-circle"></i> Compute
-              excluding <b>LAB FAT</b>
-              <input style="width: 17.5px;height:17.5px;cursor: pointer;" type="checkbox" id="withoutlfat"
-                onclick="lfatcheck()" /></span>
-          </h4>
 
 
-          <script>
-            function lfatcheck() {
-              var x = document.getElementById("withoutlfat");
-              if (x.checked == true) {
-                document.getElementById("plf").disabled = true;
-                if (document.getElementById("plf").value > -1) {
-                  document.getElementById("plf").value = "";
-                }
-                document.getElementById("plf").style.backgroundColor = "black";
-                document.getElementById("plf").placeholder = "You can skip this..";
-
-              }
-              else {
-                document.getElementById("plf").disabled = false;
-                document.getElementById("plf").style.backgroundColor = "";
-                document.getElementById("plf").placeholder = "max-50";
-              }
-            }
-
-
-          </script>
-
-
-
-          <br>
           <div class="form-group">
             <label><span class="badge badge-primary">Lab FAT:</span></label>
             <input type="number" class="form-control" id="plf" min="0" step="1" max="100" placeholder="max-50">
@@ -1545,14 +1565,27 @@ function loadfunc(){
 
     //All input limits
     document.getElementById("pcat1").onkeyup = function () {
+      var x = document.getElementById("withouttfat");
       var input = parseFloat(this.value);
-      if (Number.isNaN(input)) {
-        document.getElementById("pcat1").value = "";
-      }
+      if (x.checked == true) {
+        if (Number.isNaN(input)) {
+          document.getElementById("pcat1").value = "";
+        }
 
-      if (input < 0 || input > 50) {
-        alert("Value should be between 0 - 50");
-        document.getElementById("pcat1").value = "";
+        if (input < 0 || input > 30) {
+          alert("Value should be between 0 - 30");
+          document.getElementById("pcat1").value = "";
+        }
+      }
+      else {
+        if (Number.isNaN(input)) {
+          document.getElementById("pcat1").value = "";
+        }
+
+        if (input < 0 || input > 50) {
+          alert("Value should be between 0 - 50");
+          document.getElementById("pcat1").value = "";
+        }
       }
 
       return;
@@ -1561,14 +1594,27 @@ function loadfunc(){
 
 
     document.getElementById("pcat2").onkeyup = function () {
+      var x = document.getElementById("withouttfat");
       var input = parseFloat(this.value);
-      if (Number.isNaN(input)) {
-        document.getElementById("pcat2").value = "";
-      }
+      if (x.checked == true) {
+        if (Number.isNaN(input)) {
+          document.getElementById("pcat2").value = "";
+        }
 
-      if (input < 0 || input > 50) {
-        alert("Value should be between 0 - 50");
-        document.getElementById("pcat2").value = "";
+        if (input < 0 || input > 30) {
+          alert("Value should be between 0 - 30");
+          document.getElementById("pcat2").value = "";
+        }
+      }
+      else {
+        if (Number.isNaN(input)) {
+          document.getElementById("pcat2").value = "";
+        }
+
+        if (input < 0 || input > 50) {
+          alert("Value should be between 0 - 50");
+          document.getElementById("pcat2").value = "";
+        }
       }
 
       return;
@@ -1912,8 +1958,18 @@ function loadfunc(){
 
             else {
 
-              var cat1c = (cat1 / 50) * 15;
-              var cat2c = (cat2 / 50) * 15;
+
+              if (cat1 > 30 || cat2 > 30) {
+                document.getElementById("gradepred").innerHTML = "CAT-I/II limits is 0 -30 marks when you are computing without Theory FAT Marks";
+                document.getElementById("gradepred1").innerHTML = "";
+                document.getElementById("gradepred2").innerHTML = "";
+                document.getElementById("gradepred3").innerHTML = "";
+                document.getElementById("gradepred4").innerHTML = "";
+                return;
+              }
+
+              var cat1c = (cat1 / 30) * 15;
+              var cat2c = (cat2 / 30) * 15;
               var da1c = da1;
               var da2c = da2;
               var da3c = da3;
@@ -2619,9 +2675,16 @@ function loadfunc(){
 
 
             else {
-
-              var cat1c = (cat1 / 50) * 15;
-              var cat2c = (cat2 / 50) * 15;
+              if (cat1 > 30 || cat2 > 30) {
+                document.getElementById("gradepred").innerHTML = "CAT-I/II limits is 0 -30 marks when you are computing without Theory FAT Marks";
+                document.getElementById("gradepred1").innerHTML = "";
+                document.getElementById("gradepred2").innerHTML = "";
+                document.getElementById("gradepred3").innerHTML = "";
+                document.getElementById("gradepred4").innerHTML = "";
+                return;
+              }
+              var cat1c = (cat1 / 30) * 15;
+              var cat2c = (cat2 / 30) * 15;
               var da1c = da1;
               var da2c = da2;
               var da3c = da3;
