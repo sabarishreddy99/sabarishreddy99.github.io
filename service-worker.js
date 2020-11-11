@@ -18,6 +18,7 @@ self.addEventListener('install', function (event) {
           'elucidation.html',
           'Attendance Calculator.html',
           'logo192.png',
+          'audio.svg',
           'index.html'
         ]
       );
