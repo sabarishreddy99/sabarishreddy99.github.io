@@ -68,12 +68,13 @@
     }
 
 #loading{
-	position: fixed;
-	background: background: linear-gradient(to bottom, #003366 11%, #336699 100%) url('audio.svg') no-repeat center;
-	colour:background: linear-gradient(to bottom right, #ffcc66 11%, #ff6600 100%);
-	width:100%;
-	height:100%;
-	z-index: 99999;
+      position: fixed;
+      background: url('audio.svg') no-repeat center;
+      background-size: 12% 12%;
+      color: red;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
 }
 	
 form label{
@@ -103,6 +104,7 @@ html{
 body{
 	overflow-x: hidden;
 	overflow-y: scroll;
+	background: linear-gradient(to bottom, #003366 0%, #336699 100%);
 
 }
 section{
@@ -436,6 +438,7 @@ nav ul .nav-item:hover
 function loadfunc(){
 	var h=document.getElementById("loading");
 	h.style.display="none";
+	document.body.style.background="";
 
 }
 
