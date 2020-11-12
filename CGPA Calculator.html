@@ -1164,6 +1164,7 @@ function loadfunc(){
 	
 	
 	
+  
     <!---Feedback------------------------------->
     <div class="container containers1">
       <br>
@@ -1227,10 +1228,18 @@ function loadfunc(){
         <button
           style="display:block;float: right;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 30%;color: rgb(255, 255, 255);background-color: rgb(4, 155, 130);"
           class="btn" title="Send" id="send" type="submit" onclick="send1()">Send</button>
-	      
-	      
-	       <p style="color: #191970;float:left;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-          gradeVITian.in</p>
+
+
+
+        <h4
+          style="color: #191970;float:left;font-family: satisfy;display:inline;float:left;padding-right: 3px;padding-top: 6px;">
+          Loved it ? </h4>
+        <button type="button"
+          style="font-size: 15px;display:inline;float:left;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 50%;color: rgb(216, 36, 4);background-color: white;"
+          class="btn" title="Do you love it?" id="love" onclick="loved()">
+          <i id="lovesymbol" style="font-size: 15px" class="fas fa-heart"></i></button>
+
+        <input type="hidden" id="lovetext" name="entry.199585822" value="">
 
 
 
@@ -1279,6 +1288,24 @@ function loadfunc(){
             document.getElementById("send").style.color = "black";
 
           }
+
+
+          function loved() {
+            var currentvalue = document.getElementById('lovetext').value;
+            if (currentvalue == "") {
+              document.getElementById("lovetext").value = "Yes, I Love it.";
+              document.getElementById("love").style.border = "2px solid red";
+              document.getElementById("lovesymbol").style.color = "#483D8B";
+
+            } else {
+              document.getElementById("lovetext").value = "";
+              document.getElementById("love").style.border = "";
+              document.getElementById("lovesymbol").style.color = "red";
+            }
+          }
+
+
+
         </script>
 
         <script>
@@ -1298,6 +1325,9 @@ function loadfunc(){
 
 
     </div>
+
+
+
 
 
 
