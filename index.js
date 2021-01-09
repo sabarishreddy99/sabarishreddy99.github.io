@@ -136,7 +136,7 @@ function sendfeedback() {
   var name = document.getElementById('Name').value;
   var msg = document.getElementById('Message').value;
   if (thumbs.length != 0 && name.length != 0 && msg.length != 0) {
-    alert("Your feedback is submitted successfuly. We will be looking further to assist you. Thank you & Happy Learning!");
+    alert("Your feedback has been submitted successfuly. We will be looking further to assist you. Thank you & Happy Learning!");
 
   }
 
