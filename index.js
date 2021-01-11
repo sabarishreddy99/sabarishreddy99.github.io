@@ -1,3 +1,8 @@
+//------------------------Sweet Alert CDN insertion ----------------------------------------------
+var jQueryScript = document.createElement('script');  
+jQueryScript.setAttribute('src','https://unpkg.com/sweetalert/dist/sweetalert.min.js');
+document.head.appendChild(jQueryScript);
+
 //---------------------------loading ----------------------------------------
 
 function loadfunc() {
@@ -136,7 +141,13 @@ function sendfeedback() {
   var name = document.getElementById('Name').value;
   var msg = document.getElementById('Message').value;
   if (thumbs.length != 0 && name.length != 0 && msg.length != 0) {
-    alert("Your feedback has been submitted successfuly. We will be looking further to assist you. Thank you & Happy Learning!");
+   swal({
+      title: "Thank you!",
+      text: "Your feedback has been submitted successfuly. We will be looking further to assist you. Happy Learning!",
+      icon: "success",
+     
+    })
+    //alert("Your feedback has been submitted successfuly. We will be looking further to assist you. Thank you & Happy Learning!");
 
   }
 
