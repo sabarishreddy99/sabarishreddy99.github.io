@@ -51,6 +51,16 @@ a:hover {
   height: 200px;
 }
 
+/* ------------------  Sweet Alert --------------------------------------- */
+
+.swal-text {
+  display: block;
+  text-align: center;
+}
+
+
+
+
 /* --------------------------------------  new year ---------------------------------- */
 #new-year {
   position: absolute;
