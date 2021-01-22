@@ -77,6 +77,10 @@ a:hover {
   align-items: center;
   text-align: center;
   z-index: 3;
+  
+  /* wrapping the items (Additional) */
+  flex-wrap: wrap;
+  /* ------------ */
 }
 
 #new-year img {
