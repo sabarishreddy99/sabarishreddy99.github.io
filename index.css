@@ -157,6 +157,13 @@ textarea:focus {
   font-size: 40px;
 }
 
+.brand-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+
 #navbarNav {
   font-family: "Montserrat", sans-serif;
   color: #383754;
@@ -536,6 +543,12 @@ textarea:focus {
   .navbar-brand {
     font-size: 30px;
   }
+  
+  
+ .brand-logo {
+    display: none;
+  }
+  
 
   .intro-img {
     height: 700px;
@@ -658,6 +671,10 @@ textarea:focus {
 /* ------------------------------------    TABLET     -------------------------------------------- */
 @media screen and (min-width: 500px) and (max-width: 750px) {
   /* -----------------------------------SECTION -1 ------------------------------------------- */
+ .brand-logo {
+    display: none;
+  }
+  
   .intro-img {
     height: 850px;
     width: 850px;
