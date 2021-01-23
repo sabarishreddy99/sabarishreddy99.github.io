@@ -160,6 +160,7 @@ textarea:focus {
 .brand-logo {
   height: 60px;
   width: 60px;
+  margin-right: 2px;
   border-radius: 50%;
   border: 1px solid grey;
 }
