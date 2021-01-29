@@ -110,21 +110,75 @@
 
 <!-- ----------------------------FIXED tops---------------------------------------------- -->
 
-<div class="fixed-tops" >
+ <div class="fixed-tops">
+        <div class="go-to-top">
+          <i
+            title="Go to top"
+            onclick="topFunction()"
+            class="fas fa-angle-double-up"
+          ></i>
+        </div>
 
-  <div class="go-to-top">
-    <button  type="button" title="Go to top" onclick="topFunction()" class="btn btn-secondary btn-sm"><i class="fas fa-angle-double-up"></i></button>
-    </div>
+        <div class="share-section">
+          <button
+            type="button"
+            id="share-btn"
+            title="Go to top"
+            class="btn btn-secondary btn-sm"
+          >
+            <i class="fas fa-share-alt"></i>
+          </button>
+          <!-- SHARE CONTENT -->
+          <div class="share-content">
+            <a
+              id="whatsapp"
+              title="Whatsapp"
+              href="https://wa.me/?text=https://gradevitian.in/"
+              target="_blank"
+              ><i class="fab fa-whatsapp fa-2x"></i
+            ></a>
 
+            <a
+              id="linkedin"
+              title="Linked in"
+              href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in fa-2x"></i>
+            </a>
 
-  <div class="copy-clipboard">
-  <p id="clip-text" style="display: none;"> https://gradevitian.in/GPA%20Calculator.html </p>
-  <button  type="button" data-toggle="tooltip" data-placement="right" title="Copy Link" class="btn btn-secondary btn-sm" id="copy-text-btn"><i class="far fa-clipboard"></i></button>
-  </div>
+            <a
+              id="twitter"
+              title="twitter"
+              href="https://twitter.com/intent/tweet?text=https://gradevitian.in/"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
 
+            <a
+              id="facebook"
+              title="Facebook"
+              target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgradevitian.in%2F&amp;src=sdkpreparse"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
 
+            <a
+              data-toggle="tooltip"
+              data-placement="right"
+              title="Copy Link"
+              id="copy-text-btn"
+              ><i class="far fa-clipboard"></i
+            ></a>
+            <p id="clip-text" style="display: none">https://gradevitian.in/</p>
 
-</div>
+            <br />
+            <br />
+          </div>
+          <!-- SHARE CONTENT END -->
+        </div>
+      </div>
 
 
 
