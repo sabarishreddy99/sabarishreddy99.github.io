@@ -107,31 +107,84 @@ textarea:focus {
 
 /* --------------------------------------   Fixed tops    -------------------------------- */
 
-.go-to-top {
+.share-section {
   position: fixed;
-  right: 2.5%;
+  display: inline-block;
+  right: 3.5%;
   bottom: 2.5%;
   z-index: 1;
 }
 
-.go-to-top button i {
+#share-btn {
+  z-index: 2;
+}
+
+.share-content {
+  display: none;
+  background-color: #efeeee;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  bottom: -15%;
+  text-align: center;
+  z-index: -1;
+  min-width: 55px;
+  left: -7px;
+  border-radius: 50px;
+}
+
+.share-content a {
+  display: block;
+  cursor: pointer;
+}
+
+.share-content a:hover {
+  background-color: rgb(226, 224, 224);
+}
+
+.share-content a i {
+  font-size: 30px;
+  padding: 8px;
+}
+
+.share-section:hover .share-content {
+  display: block;
+}
+
+.share-section button i {
   font-size: 20px;
 }
 
-.copy-clipboard {
+#whatsapp {
+  color: #228b22;
+}
+
+#twitter {
+  color: #1e90ff;
+}
+
+#facebook {
+  color: #483d8b;
+}
+
+#linkedin {
+  color: #191970;
+}
+
+.go-to-top {
   position: fixed;
-  left: 2.5%;
-  bottom: 2.5%;
+  left: 50%;
+  bottom: 0.5%;
   z-index: 1;
+}
+
+.go-to-top i {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .fixed-tops button {
   border-radius: 50%;
   border-width: 4px;
-}
-
-.fixed-tops i {
-  font-size: 22px;
 }
 
 /* ------------------------------------------   SECTION-1  --------------------------------------- */
@@ -178,7 +231,7 @@ textarea:focus {
 .overlay {
   height: 0%;
   width: 100%;
-  padding-top: 300px;
+  padding-top: 270px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -526,19 +579,7 @@ textarea:focus {
     height: 150px;
   }
   /* --------------------------------  fixed tops ----------------------------------------------- */
-  .go-to-top {
-    position: fixed;
-    right: 3.5%;
-    bottom: 1.5%;
-    z-index: 1;
-  }
 
-  .copy-clipboard {
-    position: fixed;
-    left: 3.5%;
-    bottom: 1.5%;
-    z-index: 1;
-  }
 
   /* --------------------------------------SECTION-1-------------------------------------- */
   .navbar-brand {
