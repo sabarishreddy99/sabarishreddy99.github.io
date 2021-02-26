@@ -107,16 +107,13 @@ function introTEXTtypewriting() {
    } else {
     document.getElementById("go-to-top").style.display = "none";
    }
- };
+ }
 
- // When the user clicks on the button, scroll to the top of the document
- function topFunction() {
-//    document.body.scrollTop = 0;
-//    document.documentElement.scrollTop = 0;
-	 const gototopsec= document.querySelector('#section1');
-	 gototopsec.scrollIntoView({behavior:'smooth'});
-	 
- };
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  const topsy = document.querySelector("#section1");
+  topsy.scrollIntoView({ behavior: "smooth" });
+}
 
 
 
