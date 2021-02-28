@@ -117,6 +117,26 @@ function topFunction() {
 
 
 
+//qr code
+function on() {
+  document.getElementById("overlayqr").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlayqr").style.display = "none";
+}
+
+//share button
+
+function onshare() {
+  document.getElementById("overlayshare").style.display = "block";
+}
+function offshare() {
+  document.getElementById("overlayshare").style.display = "none";
+}
+
+
+
 
 
  //--------------------feed back----------------------------------------
