@@ -117,13 +117,35 @@
 
 <!-- ----------------------------FIXED tops---------------------------------------------- -->
 
- <div class="fixed-tops">
+ 
+      <div class="fixed-tops">
         <div class="go-to-top">
           <i
             title="Go to top"
             onclick="topFunction()"
-            class="fas fa-angle-double-up"
+            class="fas fa-angle-double-up topsy"
           ></i>
+        </div>
+
+        <div id="overlayqr" onclick="off()">
+          <div id="textqr">
+            <img class="brand-logo-fixedtops" src="brand-logo.svg" alt="logo" />
+            <h6>Scan here to visit</h6>
+            <h4>gradevitian.in</h4>
+            <img src="gradevitian_QR.svg" alt="Gradevitian QR code" />
+          </div>
+        </div>
+
+        <div class="share-section-left">
+          <button
+            type="button"
+            id="share-btn-left"
+            title="Go to top"
+            class="btn btn-secondary btn-sm"
+            onclick="on()"
+          >
+            <i class="fas fa-qrcode"></i>
+          </button>
         </div>
 
         <div class="share-section">
@@ -132,58 +154,69 @@
             id="share-btn"
             title="Go to top"
             class="btn btn-secondary btn-sm"
+            onclick="onshare()"
           >
             <i class="fas fa-share-alt"></i>
           </button>
-          <!-- SHARE CONTENT -->
-          <div class="share-content">
-            <a
-              id="whatsapp"
-              title="Whatsapp"
-              href="https://wa.me/?text=https://gradevitian.in/"
-              target="_blank"
-              ><i class="fab fa-whatsapp fa-2x"></i
-            ></a>
 
-            <a
-              id="linkedin"
-              title="Linked in"
-              href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin-in fa-2x"></i>
-            </a>
+          <div id="overlayshare" onclick="offshare()">
+            <!-- SHARE CONTENT -->
+            <div class="share-content" onclick="offshare()">
+              <a
+                id="whatsapp"
+                title="Whatsapp"
+                href="https://wa.me/?text=https://gradevitian.in/"
+                target="_blank"
+                ><i class="fab fa-whatsapp fa-2x"></i
+              ></a>
 
-            <a
-              id="twitter"
-              title="twitter"
-              href="https://twitter.com/intent/tweet?text=https://gradevitian.in/"
-              target="_blank"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
+              <a
+                id="linkedin"
+                title="Linked in"
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in fa-2x"></i>
+              </a>
 
-            <a
-              id="facebook"
-              title="Facebook"
-              target="_blank"
-              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgradevitian.in%2F&amp;src=sdkpreparse"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+              <a
+                id="twitter"
+                title="twitter"
+                href="https://twitter.com/intent/tweet?text=https://gradevitian.in/"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
 
-            <a
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Copy Link"
-              id="copy-text-btn"
-              ><i class="far fa-clipboard"></i
-            ></a>
-            <p id="clip-text" style="display: none">https://gradevitian.in/</p>
+              <a
+                id="facebook"
+                title="Facebook"
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgradevitian.in%2F&amp;src=sdkpreparse"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
 
-            <br />
-            <br />
+              <a
+                data-toggle="tooltip"
+                data-placement="right"
+                title="Copy Link"
+                id="copy-text-btn"
+                ><i class="far fa-clipboard"></i
+              ></a>
+              <p id="clip-text" style="display: none">
+                https://gradevitian.in/
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                onclick="offshare()"
+              >
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+            <!-- SHARE CONTENT END -->
           </div>
-          <!-- SHARE CONTENT END -->
         </div>
       </div>
 
