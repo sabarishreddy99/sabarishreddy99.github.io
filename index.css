@@ -210,6 +210,10 @@ textarea:focus {
   font-size: 20px;
 }
 
+.share-section-left button i {
+  font-size: 20px;
+}
+
 #whatsapp {
   color: #228b22;
 }
